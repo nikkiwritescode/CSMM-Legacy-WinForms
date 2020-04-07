@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomStreetManager", "CustomStreetManager.csproj", "{2314AA9C-AA62-4B39-BCAF-87C148DCB2A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2314AA9C-AA62-4B39-BCAF-87C148DCB2A0}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{2314AA9C-AA62-4B39-BCAF-87C148DCB2A0}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{2314AA9C-AA62-4B39-BCAF-87C148DCB2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2314AA9C-AA62-4B39-BCAF-87C148DCB2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01278543-4351-4D33-8209-4037C3812031}
+	EndGlobalSection
+EndGlobal

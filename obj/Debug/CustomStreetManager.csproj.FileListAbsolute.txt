@@ -1,0 +1,8 @@
+C:\Users\nikki\source\repos\CustomStreetManager\bin\Debug\CustomStreetManager.exe
+C:\Users\nikki\source\repos\CustomStreetManager\bin\Debug\CustomStreetManager.pdb
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.csprojAssemblyReference.cache
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.Form1.resources
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.Properties.Resources.resources
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.csproj.GenerateResource.cache
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.exe
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.pdb
