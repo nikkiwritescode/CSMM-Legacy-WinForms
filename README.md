@@ -1,6 +1,5 @@
 # About CSMM
-March 22, 2020 
-by nikkums (nikkums.io)
+Originally released on March 22, 2020 by nikkums (nikkums.io)
 
 Program Description:
 CSMM is designed to facilitate the modding of Fortune Street (NTSC) or Boom Street (PAL). It allows easy bulk 
