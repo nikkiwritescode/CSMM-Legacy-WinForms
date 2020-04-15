@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CustomStreetManager
 {
@@ -15,40 +16,30 @@ namespace CustomStreetManager
         string CompileDiscFilePath = @".\_windowspatchscript_compileDisc.bat";
         string CompileDiscWithWiimmfiFilePath = @".\_windowspatchscript_compileDiscwithWiimmfi.bat";
 
-        // Batch Files
-        string AngelReplaceFilePath = @".\_windowspatchscript_custom_map_to_angel.bat"; //The Observatory
-        string AlephgardReplaceFilePath = @".\_windowspatchscript_custom_map_to_alephgard.bat"; //Alefgard
-        string CircuitReplaceFilePath = @".\_windowspatchscript_custom_map_to_circuit.bat"; //Mario Circuit
-        string ColonyReplaceFilePath = @".\_windowspatchscript_custom_map_to_colony.bat"; //Good Egg Galaxy
-        string DahmaReplaceFilePath = @".\_windowspatchscript_custom_map_to_dahma.bat"; //Alltrades Alley
-        string DolpicReplaceFilePath = @".\_windowspatchscript_custom_map_to_dolpic.bat"; //Delfino Plaza
-        string KandataReplaceFilePath = @".\_windowspatchscript_custom_map_to_kendata.bat"; //Robbin' Hood Ruins
-        string KoopaReplaceFilePath = @".\_windowspatchscript_custom_map_to_koopa.bat"; //Bowser's Castle
-        string MajinzoReplaceFilePath = @".\_windowspatchscript_custom_map_to_majinzo.bat"; //The Colossus
-        string MarioReplaceFilePath = @".\_windowspatchscript_custom_map_to_mario.bat"; //Super Mario Bros.
-        string MooncityReplaceFilePath = @".\_windowspatchscript_custom_map_to_mooncity.bat"; //Starship Mario
-        string SlabbakatouReplaceFilePath = @".\_windowspatchscript_custom_map_to_slabakkatou.bat"; //Slimenia
-        string StadiumReplaceFilePath = @".\_windowspatchscript_custom_map_to_studium.bat"; //Mario Stadium
-        string TorodeenReplaceFilePath = @".\_windowspatchscript_custom_map_to_torodeen.bat"; //Castle Trodain
-        string YosshiReplaceFilePath = @".\_windowspatchscript_custom_map_to_yosshi.bat"; //Yoshi's Island
-        string YuureisenReplaceFilePath = @".\_windowspatchscript_custom_map_to_yuureisen.bat"; //Ghost Ship
-
         //Other Options
-        string DisableMusicFilePath = @".\_windowspatchscript_disablemusic.bat";
-        string DisableMusicFilePathDir2 = @".\_windowspatchscript_disablemusic2.bat";
-        string PatchToWiimmfiFilePath = @".\_windowspatchscript_wiimmfi.bat";
-
         string DeflaktorASMBootDol = @"..\_asm\main.dol";
-        string DeflaktorASMUIMessageEN = @"..\_asm\ui_message.de.csv";
-        string DeflaktorASMUIMessageDE = @"..\_asm\ui_message.en.csv";
+        string DeflaktorASMUIMessageEN = @"..\_asm\ui_message.en.csv";
+        string DeflaktorASMUIMessageDE = @"..\_asm\ui_message.de.csv";
+        string DeflaktorASMUIMessageUK = @"..\_asm\ui_message.uk.csv";
+        string DeflaktorASMUIMessageENPlusWiimmfi = @"..\_asm\ui_message_wiimmfi.en.csv";
+        string DeflaktorASMUIMessageDEPlusWiimmfi = @"..\_asm\ui_message_wiimmfi.de.csv";
+        string DeflaktorASMUIMessageUKPlusWiimmfi = @"..\_asm\ui_message_wiimmfi.uk.csv";
+
+        string USWiimmfiUIUpdateFile = @"..\_wiimmfi\ui_message_wiimmfi_without_asm.en.csv";
+        string UKWiimmfiUIUpdateFile = @"..\_wiimmfi\ui_message_wiimmfi_without_asm.uk.csv";
+        string DEWiimmfiUIUpdateFile = @"..\_wiimmfi\ui_message_wiimmfi_without_asm.de.csv";
 
         string originalBootDol = @"..\_working_directory\DATA\sys\main.dol";
-        string originalUIMessageEN = @"..\_working_directory\DATA\files\localize\ui_message.de.csv";
-        string originalUIMessageDE = @"..\_working_directory\DATA\files\localize\ui_message.en.csv";
+        string originalUIMessageEN = @"..\_working_directory\DATA\files\localize\ui_message.en.csv";
+        string originalUIMessageDE = @"..\_working_directory\DATA\files\localize\ui_message.de.csv";
+        string originalUIMessageUK = @"..\_working_directory\DATA\files\localize\ui_message.uk.csv";
+
 
         string originalBootDol2 = @"..\_working_directory\sys\main.dol";
-        string originalUIMessageEN2 = @"..\_working_directory\files\localize\ui_message.de.csv";
-        string originalUIMessageDE2 = @"..\_working_directory\files\localize\ui_message.en.csv";
+        string originalUIMessageEN2 = @"..\_working_directory\files\localize\ui_message.en.csv";
+        string originalUIMessageDE2 = @"..\_working_directory\files\localize\ui_message.de.csv";
+        string originalUIMessageUK2 = @"..\_working_directory\files\localize\ui_message.uk.csv";
+
 
         //Maps
         string angel0FilePath = @"..\_working_directory\data\files\param\angel0.frb";
@@ -111,6 +102,67 @@ namespace CustomStreetManager
         string outputFolderPath = @"..\_patched_iso_will_go_here\";
         string vanillaISOFolderPath = @"..\_place_vanilla_iso_here\";
 
+        //MENU and INTRO BGM
+        //directory 1
+        string titleBGMFilePath = @"..\_working_directory\data\files\sound\stream\01_BGM_TITLE.brstm";
+        string miiSaveScreenBGMFilePath = @"..\_working_directory\data\files\sound\stream\01_ME_SAVE.brstm";
+        string demoReelBGMFilePath = @"..\_working_directory\data\files\sound\stream\02_BGM_DEMO.brstm";
+        string bannerBGMFilePath = @"..\_working_directory\data\files\sound\stream\03_BGM_BANNER.brstm";
+        string miiHolidayBGMFilePath = @"..\_working_directory\data\files\sound\stream\03_ME_HOLIDAY.brstm";
+        string saveLoadScreenBGMFilePath = @"..\_working_directory\data\files\sound\stream\04_BGM_SAVELOAD.brstm";
+        string menuBGMFilePath = @"..\_working_directory\data\files\sound\stream\05_BGM_MENU.brstm";
+        string fireworksSoundFilePath = @"..\_working_directory\data\files\sound\stream\19_ME_OP_FIREWORKS.brstm";
+
+        //directory 2
+        string titleBGMFilePath2 = @"..\_working_directory\files\sound\stream\01_BGM_TITLE.brstm";
+        string miiSaveScreenBGMFilePath2 = @"..\_working_directory\files\sound\stream\01_ME_SAVE.brstm";
+        string demoReelBGMFilePath2 = @"..\_working_directory\files\sound\stream\02_BGM_DEMO.brstm";
+        string bannerBGMFilePath2 = @"..\_working_directory\files\sound\stream\03_BGM_BANNER.brstm";
+        string miiHolidayBGMFilePath2 = @"..\_working_directory\files\sound\stream\03_ME_HOLIDAY.brstm";
+        string saveLoadScreenBGMFilePath2 = @"..\_working_directory\files\sound\stream\04_BGM_SAVELOAD.brstm";
+        string menuBGMFilePath2 = @"..\_working_directory\files\sound\stream\05_BGM_MENU.brstm";
+        string fireworksSoundFilePath2 = @"..\_working_directory\files\sound\stream\19_ME_OP_FIREWORKS.brstm";
+
+        //MAP BGM
+        //directory 1
+        string alephgardBGMFilePath = @"..\_working_directory\data\files\sound\stream\35_BGM_MAP_ALEFGARD.brstm";
+        string angelBGMFilePath = @"..\_working_directory\data\files\sound\stream\37_BGM_MAP_ANGEL.brstm";
+        string circuitBGMFilePath = @"..\_working_directory\data\files\sound\stream\21_BGM_MAP_CIRCUIT.brstm";
+        string colonyBGMFilePath = @"..\_working_directory\data\files\sound\stream\28_BGM_MAP_EGG.brstm";
+        string dahmaBGMFilePath = @"..\_working_directory\data\files\sound\stream\36_BGM_MAP_DHAMA.brstm";
+        string dolpicBGMFilePath = @"..\_working_directory\data\files\sound\stream\24_BGM_MAP_DOLPIC.brstm";
+        string hidariBGMFilePath = @"..\_working_directory\data\files\sound\stream\22_BGM_MAP_PEACH.brstm";
+        string kandataBGMFilePath = @"..\_working_directory\data\files\sound\stream\34_BGM_MAP_KANDATA.brstm";
+        string koopaBGMFilePath = @"..\_working_directory\data\files\sound\stream\26_BGM_MAP_KOOPA.brstm";
+        string majinzo0BGMFilePath = @"..\_working_directory\data\files\sound\stream\31_BGM_MAP_MAJINZOU.brstm";
+        string marioBGMFilePath = @"..\_working_directory\data\files\sound\stream\25_BGM_MAP_SMB.brstm";
+        string mooncityBGMFilePath = @"..\_working_directory\data\files\sound\stream\27_BGM_MAP_STARSHIP.brstm";
+        string slabbakatouBGMFilePath = @"..\_working_directory\data\files\sound\stream\33_BGM_MAP_SLABACCA.brstm";
+        string stadiumBGMFilePath = @"..\_working_directory\data\files\sound\stream\23_BGM_MAP_STADIUM.brstm";
+        string torodeenBGMFilePath = @"..\_working_directory\data\files\sound\stream\29_BGM_MAP_TRODAIN.brstm";
+        string yosshiBGMFilePath = @"..\_working_directory\data\files\sound\stream\20_BGM_MAP_YOSHI.brstm";
+        string yuureisenBGMFilePath = @"..\_working_directory\data\files\sound\stream\30_BGM_MAP_GHOSTSHIP.brstm";
+
+        //directory 2 //TODO: FIX THESE
+        string alephgardBGMFilePath2 = @"..\_working_directory\files\sound\stream\35_BGM_MAP_ALEFGARD.brstm";
+        string angelBGMFilePath2 = @"..\_working_directory\files\sound\stream\37_BGM_MAP_ANGEL.brstm";
+        string circuitBGMFilePath2 = @"..\_working_directory\files\sound\stream\21_BGM_MAP_CIRCUIT.brstm";
+        string colonyBGMFilePath2 = @"..\_working_directory\files\sound\stream\28_BGM_MAP_EGG.brstm";
+        string dahmaBGMFilePath2 = @"..\_working_directory\files\sound\stream\36_BGM_MAP_DHAMA.brstm";
+        string dolpicBGMFilePath2 = @"..\_working_directory\files\sound\stream\24_BGM_MAP_DOLPIC.brstm";
+        string hidariBGMFilePath2 = @"..\_working_directory\files\sound\stream\22_BGM_MAP_PEACH.brstm";
+        string kandataBGMFilePath2 = @"..\_working_directory\files\sound\stream\34_BGM_MAP_KANDATA.brstm";
+        string koopaBGMFilePath2 = @"..\_working_directory\files\sound\stream\26_BGM_MAP_KOOPA.brstm";
+        string majinzo0BGMFilePath2 = @"..\_working_directory\files\sound\stream\31_BGM_MAP_MAJINZOU.brstm";
+        string marioBGMFilePath2 = @"..\_working_directory\files\sound\stream\25_BGM_MAP_SMB.brstm";
+        string mooncityBGMFilePath2 = @"..\_working_directory\files\sound\stream\27_BGM_MAP_STARSHIP.brstm";
+        string slabbakatouBGMFilePath2 = @"..\_working_directory\files\sound\stream\33_BGM_MAP_SLABACCA.brstm";
+        string stadiumBGMFilePath2 = @"..\_working_directory\files\sound\stream\23_BGM_MAP_STADIUM.brstm";
+        string torodeenBGMFilePath2 = @"..\_working_directory\files\sound\stream\29_BGM_MAP_TRODAIN.brstm";
+        string yosshiBGMFilePath2 = @"..\_working_directory\files\sound\stream\20_BGM_MAP_YOSHI.brstm";
+        string yuureisenBGMFilePath2 = @"..\_working_directory\files\sound\stream\30_BGM_MAP_GHOSTSHIP.brstm";
+
+        string emptyMusicTrack = @"..\_zmisc\empty.brstm";
         string directoryTestFolderPath = @"..\_working_directory\";
 
         bool dir1 = false;
@@ -120,6 +172,9 @@ namespace CustomStreetManager
         int observatoryDynamicCount = 0;
         int colossusDynamicCount = 0;
         int mtMagDynamicCount = 0;
+
+        int timeLeft = 5;
+        bool changesFinalized = false;
 
         string Arguments = "start /wait /min /c";
 
@@ -173,139 +228,169 @@ namespace CustomStreetManager
             UpdateProgressWindow(instance, "Extracting disc...", 25);
             if (File.Exists(setInputISOLocation.Text))
             {
-                ProcessStartInfo psi = new ProcessStartInfo(ExtractDiscFilePath, Arguments);
-                psi.Arguments = "\"" + setInputISOLocation.Text + "\"";
-                psi.CreateNoWindow = true;
-                psi.UseShellExecute = false;
-
-                var p = Process.Start(psi);
-                p.WaitForExit();
-
-                DetermineISOFolderStructure(instance);
-
-                UpdateProgressWindow(instance, "Replacing maps...", 40);
-
-                foreach (ListViewItem item in listOfMapsToPatchIn.Items)
+                if (setOutputPathLabel.Text != "None")
                 {
-                    string newMapPath = item.SubItems[2].Text;
-                    string mapToReplace = item.SubItems[1].Text;
-                    //the below declarations are determining what this does when it's clicked, as it is map-dependent. (probably should be its own method)
+                    ProcessStartInfo psi = new ProcessStartInfo(ExtractDiscFilePath, Arguments);
+                    psi.Arguments = "\"" + setInputISOLocation.Text + "\"";
+                    psi.CreateNoWindow = true;
+                    psi.UseShellExecute = false;
 
-                    //dynamic maps; maps that take up more than 1 map file
+                    var p = Process.Start(psi);
+                    p.WaitForExit();
 
-                    if (item.SubItems[1].Text == "*The Observatory" && item.SubItems[3].Text == "true")
+                    DetermineISOFolderStructure(instance);
+
+                    UpdateProgressWindow(instance, "Replacing maps...", 40);
+
+                    foreach (ListViewItem item in listOfMapsToPatchIn.Items)
                     {
-                        ReplaceDynamicObservatory(item, item.SubItems[2].Text);
+                        string newMapPath = item.SubItems[2].Text;
+                        string mapToReplace = item.SubItems[1].Text;
+                        //the below declarations are determining what this does when it's clicked, as it is map-dependent. (probably should be its own method)
+
+                        //dynamic maps; maps that take up more than 1 map file
+
+                        if (item.SubItems[1].Text == "*The Observatory" && item.SubItems[3].Text == "true")
+                        {
+                            ReplaceDynamicObservatory(item, item.SubItems[2].Text);
+                        }
+
+                        else if (item.SubItems[1].Text == "*Colossus" && item.SubItems[3].Text == "true")
+                        {
+                            ReplaceDynamicColossus(item, item.SubItems[2].Text);
+                        }
+                        else if (item.SubItems[1].Text == "*Mt. Magmageddon" && item.SubItems[3].Text == "true")
+                        {
+                            ReplaceDynamicMtMagmageddon(item, item.SubItems[2].Text);
+                        }
+
+                        //simple maps
+
+                        if (mapToReplace == "Castle Trodain")
+                        {
+                            ReplaceCastleTrodain(newMapPath);
+                        }
+                        else if (mapToReplace == "The Observatory")
+                        {
+                            ReplaceStaticObservatory(newMapPath);
+                        }
+                        else if (mapToReplace == "Ghost Ship")
+                        {
+                            ReplaceGhostShip(newMapPath);
+                        }
+                        else if (mapToReplace == "Slimenia")
+                        {
+                            ReplaceSlimenia(newMapPath);
+                        }
+                        else if (mapToReplace == "Mt. Magmageddon")
+                        {
+                            ReplaceStaticMtMagmageddon(newMapPath);
+                        }
+                        else if (mapToReplace == "Robbin' Hood Ruins")
+                        {
+                            ReplaceRobbinHoodRuins(newMapPath);
+                        }
+                        else if (mapToReplace == "Peach's Castle")
+                        {
+                            ReplacePeachsCastle(newMapPath);
+                        }
+                        else if (mapToReplace == "Delfino Plaza")
+                        {
+                            ReplaceDelfinoPlaza(newMapPath);
+                        }
+                        else if (mapToReplace == "Yoshi's Island")
+                        {
+                            ReplaceYoshisIsland(newMapPath);
+                        }
+                        else if (mapToReplace == "Mario Circuit")
+                        {
+                            ReplaceMarioCircuit(newMapPath);
+                        }
+                        else if (mapToReplace == "Starship Mario")
+                        {
+                            ReplaceStarshipMario(newMapPath);
+                        }
+                        else if (mapToReplace == "Mario Stadium")
+                        {
+                            ReplaceMarioStadium(newMapPath);
+                        }
+                        else if (mapToReplace == "Alltrades Abbey")
+                        {
+                            ReplaceAlltradesAbbey(newMapPath);
+                        }
+                        else if (mapToReplace == "Colossus")
+                        {
+                            ReplaceColossus(newMapPath);
+                        }
+                        else if (mapToReplace == "Good Egg Galaxy")
+                        {
+                            ReplaceGoodEggGalaxy(newMapPath);
+                        }
+                        else if (mapToReplace == "Bowser's Castle")
+                        {
+                            ReplaceBowsersCastle(newMapPath);
+                        }
+                        else if (mapToReplace == "Super Mario Bros.")
+                        {
+                            ReplaceSMB(newMapPath);
+                        }
+                        else if (mapToReplace == "Alefgard")
+                        {
+                            ReplaceAlefgard(newMapPath);
+                        }
+                        else if (noneButton.Checked)
+                        {
+                            //not much to do here!
+                        }
+                    }
+                    UpdateProgressWindow(instance, "Setting Options...", 70);
+
+                    RemoveMusic();
+                    ASMHacks();
+                    UpdateUIForWiimmfi();
+
+                    UpdateProgressWindow(instance, "Finalizing changes...", 85);
+
+                    while (!changesFinalized)
+                    {
+                        Thread.Sleep(5000);
+                        changesFinalized = true; //super crude pause to wait for the disk to write all the changes
                     }
 
-                    else if (item.SubItems[1].Text == "*Colossus" && item.SubItems[3].Text == "true")
-                    {
-                        ReplaceDynamicColossus(item, item.SubItems[2].Text);
-                    }
-                    else if (item.SubItems[1].Text == "*Mt. Magmageddon" && item.SubItems[3].Text == "true")
-                    {
-                        ReplaceDynamicMtMagmageddon(item, item.SubItems[2].Text);
-                    }
+                    UpdateProgressWindow(instance, "Re-compiling disc...", 90);
 
-                    //simple maps
+                    CompileTheDisc();
 
-                    if (mapToReplace == "Castle Trodain")
-                    {
-                        ReplaceCastleTrodain(newMapPath);
-                    }
-                    else if (mapToReplace == "The Observatory")
-                    {
-                        ReplaceStaticObservatory(newMapPath);
-                    }
-                    else if (mapToReplace == "Ghost Ship")
-                    {
-                        ReplaceGhostShip(newMapPath);
-                    }
-                    else if (mapToReplace == "Slimenia")
-                    {
-                        ReplaceSlimenia(newMapPath);
-                    }
-                    else if (mapToReplace == "Mt. Magmageddon")
-                    {
-                        ReplaceStaticMtMagmageddon(newMapPath);
-                    }
-                    else if (mapToReplace == "Robbin' Hood Ruins")
-                    {
-                        ReplaceRobbinHoodRuins(newMapPath);
-                    }
-                    else if (mapToReplace == "Peach's Castle")
-                    {
-                        ReplacePeachsCastle(newMapPath);
-                    }
-                    else if (mapToReplace == "Delfino Plaza")
-                    {
-                        ReplaceDelfinoPlaza(newMapPath);
-                    }
-                    else if (mapToReplace == "Yoshi's Island")
-                    {
-                        ReplaceYoshisIsland(newMapPath);
-                    }
-                    else if (mapToReplace == "Mario Circuit")
-                    {
-                        ReplaceMarioCircuit(newMapPath);
-                    }
-                    else if (mapToReplace == "Starship Mario")
-                    {
-                        ReplaceStarshipMario(newMapPath);
-                    }
-                    else if (mapToReplace == "Mario Stadium")
-                    {
-                        ReplaceMarioStadium(newMapPath);
-                    }
-                    else if (mapToReplace == "Alltrades Abbey")
-                    {
-                        ReplaceAlltradesAbbey(newMapPath);
-                    }
-                    else if (mapToReplace == "Colossus")
-                    {
-                        ReplaceColossus(newMapPath);
-                    }
-                    else if (mapToReplace == "Good Egg Galaxy")
-                    {
-                        ReplaceGoodEggGalaxy(newMapPath);
-                    }
-                    else if (mapToReplace == "Bowser's Castle")
-                    {
-                        ReplaceBowsersCastle(newMapPath);
-                    }
-                    else if (mapToReplace == "Super Mario Bros.")
-                    {
-                        ReplaceSMB(newMapPath);
-                    }
-                    else if (mapToReplace == "Alefgard")
-                    {
-                        ReplaceAlefgard(newMapPath);
-                    }
-                    else if (noneButton.Checked)
-                    {
-                        //not much to do here!
-                    }   
+                    UpdateProgressWindow(instance, "Done!", 100);
+                    instance.SetButtonToClose();
                 }
-                UpdateProgressWindow(instance, "Setting Options...", 70);
-
-                RemoveMusic();
-                ASMHacks();
-
-                UpdateProgressWindow(instance, "Re-compiling disc...", 80);
-
-                CompileTheDisc();
-
-                UpdateProgressWindow(instance, "Done!", 100);
-                instance.SetButtonToClose();
+                else
+                {
+                    instance.SetProgressBarLabel("Error: The output file path cannot be blank!");
+                    instance.SetProgressBarValue(100);
+                    instance.SetButtonToGoBack();
+                }
             }
             else
             {
                 instance.SetProgressBarLabel("Error: The source ISO could not be opened.");
                 instance.SetProgressBarValue(100);
-                instance.SetButtonToClose();
+                instance.SetButtonToGoBack();
             }
-                
         }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            if(timeLeft > 0)
+            {
+                timeLeft -= 1;
+            }
+            else
+            {
+                changesFinalized = true;
+            }
+        }
+
 
         private void DetermineISOFolderStructure(ProgressBar instance)
         {
@@ -338,14 +423,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(volcano0FilePath))
                     {
-                        MoveMapFile(newMapPath, volcano0FilePath);
+                        MoveFile(newMapPath, volcano0FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(volcano0FilePath2))
                     {
-                        MoveMapFile(newMapPath, volcano0FilePath2);
+                        MoveFile(newMapPath, volcano0FilePath2);
                     }
                 }
             }
@@ -355,14 +440,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(volcano1FilePath))
                     {
-                        MoveMapFile(newMapPath, volcano1FilePath);
+                        MoveFile(newMapPath, volcano1FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(volcano1FilePath2))
                     {
-                        MoveMapFile(newMapPath, volcano1FilePath2);
+                        MoveFile(newMapPath, volcano1FilePath2);
                     }
                 }
             }
@@ -376,14 +461,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(majinzo0FilePath))
                     {
-                        MoveMapFile(newMapPath, majinzo0FilePath);
+                        MoveFile(newMapPath, majinzo0FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(majinzo0FilePath2))
                     {
-                        MoveMapFile(newMapPath, majinzo0FilePath2);
+                        MoveFile(newMapPath, majinzo0FilePath2);
                     }
                 }
             }
@@ -393,14 +478,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(majinzo1FilePath))
                     {
-                        MoveMapFile(newMapPath, majinzo1FilePath);
+                        MoveFile(newMapPath, majinzo1FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(majinzo1FilePath2))
                     {
-                        MoveMapFile(newMapPath, majinzo1FilePath2);
+                        MoveFile(newMapPath, majinzo1FilePath2);
                     }
                 }
             }
@@ -414,14 +499,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel0FilePath))
                     {
-                        MoveMapFile(newMapPath, angel0FilePath);
+                        MoveFile(newMapPath, angel0FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel0FilePath2))
                     {
-                        MoveMapFile(newMapPath, angel0FilePath2);
+                        MoveFile(newMapPath, angel0FilePath2);
                     }
                 }
             }
@@ -431,14 +516,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel1FilePath))
                     {
-                        MoveMapFile(newMapPath, angel1FilePath);
+                        MoveFile(newMapPath, angel1FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel1FilePath2))
                     {
-                        MoveMapFile(newMapPath, angel1FilePath2);
+                        MoveFile(newMapPath, angel1FilePath2);
                     }
                 }
             }
@@ -448,14 +533,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel2FilePath))
                     {
-                        MoveMapFile(newMapPath, angel2FilePath);
+                        MoveFile(newMapPath, angel2FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel2FilePath2))
                     {
-                        MoveMapFile(newMapPath, angel2FilePath2);
+                        MoveFile(newMapPath, angel2FilePath2);
                     }
                 }
             }
@@ -465,14 +550,14 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel3FilePath))
                     {
-                        MoveMapFile(newMapPath, angel3FilePath);
+                        MoveFile(newMapPath, angel3FilePath);
                     }
                 }
                 else if (dir2)
                 {
                     if (File.Exists(newMapPath) && File.Exists(angel3FilePath2))
                     {
-                        MoveMapFile(newMapPath, angel3FilePath2);
+                        MoveFile(newMapPath, angel3FilePath2);
                     }
                 }
             }
@@ -484,14 +569,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(torodeenFilePath))
                 {
-                    MoveMapFile(newMapPath, torodeenFilePath);
+                    MoveFile(newMapPath, torodeenFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(torodeenFilePath2))
                 {
-                    MoveMapFile(newMapPath, torodeenFilePath2);
+                    MoveFile(newMapPath, torodeenFilePath2);
                 }
             }
         }
@@ -502,14 +587,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(angel0FilePath))
                 {
-                    MoveMapFile(newMapPath, angel0FilePath);
+                    MoveFile(newMapPath, angel0FilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(angel0FilePath2))
                 {
-                    MoveMapFile(newMapPath, angel0FilePath2);
+                    MoveFile(newMapPath, angel0FilePath2);
                 }
             }
         }
@@ -520,14 +605,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(yuureisenFilePath))
                 {
-                    MoveMapFile(newMapPath, yuureisenFilePath);
+                    MoveFile(newMapPath, yuureisenFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(yuureisenFilePath2))
                 {
-                    MoveMapFile(newMapPath, yuureisenFilePath2);
+                    MoveFile(newMapPath, yuureisenFilePath2);
                 }
             }
         }
@@ -538,14 +623,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(slabbakatouFilePath))
                 {
-                    MoveMapFile(newMapPath, slabbakatouFilePath);
+                    MoveFile(newMapPath, slabbakatouFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(slabbakatouFilePath2))
                 {
-                    MoveMapFile(newMapPath, slabbakatouFilePath2);
+                    MoveFile(newMapPath, slabbakatouFilePath2);
                 }
             }
         }
@@ -556,14 +641,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(volcano0FilePath))
                 {
-                    MoveMapFile(newMapPath, volcano0FilePath);
+                    MoveFile(newMapPath, volcano0FilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(volcano0FilePath2))
                 {
-                    MoveMapFile(newMapPath, volcano0FilePath2);
+                    MoveFile(newMapPath, volcano0FilePath2);
                 }
             }
         }
@@ -574,14 +659,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(kandataFilePath))
                 {
-                    MoveMapFile(newMapPath, kandataFilePath);
+                    MoveFile(newMapPath, kandataFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(kandataFilePath2))
                 {
-                    MoveMapFile(newMapPath, kandataFilePath2);
+                    MoveFile(newMapPath, kandataFilePath2);
                 }
             }
         }
@@ -592,14 +677,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(hidariFilePath))
                 {
-                    MoveMapFile(newMapPath, hidariFilePath);
+                    MoveFile(newMapPath, hidariFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(hidariFilePath2))
                 {
-                    MoveMapFile(newMapPath, hidariFilePath2);
+                    MoveFile(newMapPath, hidariFilePath2);
                 }
             }
         }
@@ -610,14 +695,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(dolpicFilePath))
                 {
-                    MoveMapFile(newMapPath, dolpicFilePath);
+                    MoveFile(newMapPath, dolpicFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(dolpicFilePath2))
                 {
-                    MoveMapFile(newMapPath, dolpicFilePath2);
+                    MoveFile(newMapPath, dolpicFilePath2);
                 }
             }
         }
@@ -628,14 +713,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(yosshiFilePath))
                 {
-                    MoveMapFile(newMapPath, yosshiFilePath);
+                    MoveFile(newMapPath, yosshiFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(yosshiFilePath2))
                 {
-                    MoveMapFile(newMapPath, yosshiFilePath2);
+                    MoveFile(newMapPath, yosshiFilePath2);
                 }
             }
         }
@@ -646,14 +731,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(circuitFilePath))
                 {
-                    MoveMapFile(newMapPath, circuitFilePath);
+                    MoveFile(newMapPath, circuitFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(circuitFilePath2))
                 {
-                    MoveMapFile(newMapPath, circuitFilePath2);
+                    MoveFile(newMapPath, circuitFilePath2);
                 }
             }
         }
@@ -664,14 +749,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(mooncityFilePath))
                 {
-                    MoveMapFile(newMapPath, mooncityFilePath);
+                    MoveFile(newMapPath, mooncityFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(mooncityFilePath2))
                 {
-                    MoveMapFile(newMapPath, mooncityFilePath2);
+                    MoveFile(newMapPath, mooncityFilePath2);
                 }
             }
         }
@@ -682,14 +767,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(stadiumFilePath))
                 {
-                    MoveMapFile(newMapPath, stadiumFilePath);
+                    MoveFile(newMapPath, stadiumFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(stadiumFilePath2))
                 {
-                    MoveMapFile(newMapPath, stadiumFilePath2);
+                    MoveFile(newMapPath, stadiumFilePath2);
                 }
             }
         }
@@ -700,14 +785,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(dahmaFilePath))
                 {
-                    MoveMapFile(newMapPath, dahmaFilePath);
+                    MoveFile(newMapPath, dahmaFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(dahmaFilePath2))
                 {
-                    MoveMapFile(newMapPath, dahmaFilePath2);
+                    MoveFile(newMapPath, dahmaFilePath2);
                 }
             }
         }
@@ -718,14 +803,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(majinzo0FilePath))
                 {
-                    MoveMapFile(newMapPath, majinzo0FilePath);
+                    MoveFile(newMapPath, majinzo0FilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(majinzo0FilePath2))
                 {
-                    MoveMapFile(newMapPath, majinzo0FilePath2);
+                    MoveFile(newMapPath, majinzo0FilePath2);
                 }
             }
         }
@@ -736,14 +821,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(colonyFilePath))
                 {
-                    MoveMapFile(newMapPath, colonyFilePath);
+                    MoveFile(newMapPath, colonyFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(colonyFilePath2))
                 {
-                    MoveMapFile(newMapPath, colonyFilePath2);
+                    MoveFile(newMapPath, colonyFilePath2);
                 }
             }
         }
@@ -754,14 +839,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(koopaFilePath))
                 {
-                    MoveMapFile(newMapPath, koopaFilePath);
+                    MoveFile(newMapPath, koopaFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(koopaFilePath2))
                 {
-                    MoveMapFile(newMapPath, koopaFilePath2);
+                    MoveFile(newMapPath, koopaFilePath2);
                 }
             }
         }
@@ -772,14 +857,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(marioFilePath))
                 {
-                    MoveMapFile(newMapPath, marioFilePath);
+                    MoveFile(newMapPath, marioFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(marioFilePath2))
                 {
-                    MoveMapFile(newMapPath, marioFilePath2);
+                    MoveFile(newMapPath, marioFilePath2);
                 }
             }
         }
@@ -790,14 +875,14 @@ namespace CustomStreetManager
             {
                 if (File.Exists(newMapPath) && File.Exists(alephgardFilePath))
                 {
-                    MoveMapFile(newMapPath, alephgardFilePath);
+                    MoveFile(newMapPath, alephgardFilePath);
                 }
             }
             else if (dir2)
             {
                 if (File.Exists(newMapPath) && File.Exists(alephgardFilePath2))
                 {
-                    MoveMapFile(newMapPath, alephgardFilePath2);
+                    MoveFile(newMapPath, alephgardFilePath2);
                 }
             }
         }
@@ -806,26 +891,63 @@ namespace CustomStreetManager
         {
             if (removeIntroMenuAndMapBgmToolStripMenuItem.Checked)
             {
-                if (dir1)
+                if (File.Exists(emptyMusicTrack))
                 {
-                    if (File.Exists(DisableMusicFilePath))
+                    if (dir1)
                     {
-                        ProcessStartInfo psi2 = new ProcessStartInfo(DisableMusicFilePath, Arguments);
-                        psi2.CreateNoWindow = true;
-                        psi2.UseShellExecute = false;
-                        var p2 = Process.Start(psi2);
-                        p2.WaitForExit();
+                        MoveFile(emptyMusicTrack, titleBGMFilePath);
+                        MoveFile(emptyMusicTrack, miiSaveScreenBGMFilePath);
+                        MoveFile(emptyMusicTrack, demoReelBGMFilePath);
+                        MoveFile(emptyMusicTrack, bannerBGMFilePath);
+                        MoveFile(emptyMusicTrack, miiHolidayBGMFilePath);
+                        MoveFile(emptyMusicTrack, saveLoadScreenBGMFilePath);
+                        MoveFile(emptyMusicTrack, menuBGMFilePath);
+                        MoveFile(emptyMusicTrack, fireworksSoundFilePath);
+                        MoveFile(emptyMusicTrack, alephgardBGMFilePath);
+                        MoveFile(emptyMusicTrack, angelBGMFilePath);
+                        MoveFile(emptyMusicTrack, circuitBGMFilePath);
+                        MoveFile(emptyMusicTrack, colonyBGMFilePath);
+                        MoveFile(emptyMusicTrack, dahmaBGMFilePath);
+                        MoveFile(emptyMusicTrack, dolpicBGMFilePath);
+                        MoveFile(emptyMusicTrack, hidariBGMFilePath);
+                        MoveFile(emptyMusicTrack, kandataBGMFilePath);
+                        MoveFile(emptyMusicTrack, koopaBGMFilePath);
+                        MoveFile(emptyMusicTrack, majinzo0BGMFilePath);
+                        MoveFile(emptyMusicTrack, marioBGMFilePath);
+                        MoveFile(emptyMusicTrack, mooncityBGMFilePath);
+                        MoveFile(emptyMusicTrack, slabbakatouBGMFilePath);
+                        MoveFile(emptyMusicTrack, stadiumBGMFilePath);
+                        MoveFile(emptyMusicTrack, torodeenBGMFilePath);
+                        MoveFile(emptyMusicTrack, yosshiBGMFilePath);
+                        MoveFile(emptyMusicTrack, yuureisenBGMFilePath);
                     }
-                }
-                else if (dir2)
-                {
-                    if (File.Exists(DisableMusicFilePathDir2))
+                    else if (dir2)
                     {
-                        ProcessStartInfo psi2 = new ProcessStartInfo(DisableMusicFilePathDir2, Arguments);
-                        psi2.CreateNoWindow = true;
-                        psi2.UseShellExecute = false;
-                        var p2 = Process.Start(psi2);
-                        p2.WaitForExit();
+                        MoveFile(emptyMusicTrack, titleBGMFilePath2);
+                        MoveFile(emptyMusicTrack, miiSaveScreenBGMFilePath2);
+                        MoveFile(emptyMusicTrack, demoReelBGMFilePath2);
+                        MoveFile(emptyMusicTrack, bannerBGMFilePath2);
+                        MoveFile(emptyMusicTrack, miiHolidayBGMFilePath2);
+                        MoveFile(emptyMusicTrack, saveLoadScreenBGMFilePath2);
+                        MoveFile(emptyMusicTrack, menuBGMFilePath2);
+                        MoveFile(emptyMusicTrack, fireworksSoundFilePath2);
+                        MoveFile(emptyMusicTrack, alephgardBGMFilePath2);
+                        MoveFile(emptyMusicTrack, angelBGMFilePath2);
+                        MoveFile(emptyMusicTrack, circuitBGMFilePath2);
+                        MoveFile(emptyMusicTrack, colonyBGMFilePath2);
+                        MoveFile(emptyMusicTrack, dahmaBGMFilePath2);
+                        MoveFile(emptyMusicTrack, dolpicBGMFilePath2);
+                        MoveFile(emptyMusicTrack, hidariBGMFilePath2);
+                        MoveFile(emptyMusicTrack, kandataBGMFilePath2);
+                        MoveFile(emptyMusicTrack, koopaBGMFilePath2);
+                        MoveFile(emptyMusicTrack, majinzo0BGMFilePath2);
+                        MoveFile(emptyMusicTrack, marioBGMFilePath2);
+                        MoveFile(emptyMusicTrack, mooncityBGMFilePath2);
+                        MoveFile(emptyMusicTrack, slabbakatouBGMFilePath2);
+                        MoveFile(emptyMusicTrack, stadiumBGMFilePath2);
+                        MoveFile(emptyMusicTrack, torodeenBGMFilePath2);
+                        MoveFile(emptyMusicTrack, yosshiBGMFilePath2);
+                        MoveFile(emptyMusicTrack, yuureisenBGMFilePath2);
                     }
                 }
             }
@@ -839,20 +961,40 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(originalBootDol) && File.Exists(DeflaktorASMBootDol))
                     {
-                        File.Delete(originalBootDol);
-                        File.Copy(DeflaktorASMBootDol, originalBootDol);
+                        MoveFile(DeflaktorASMBootDol, originalBootDol);
                     }
 
-                    if (File.Exists(originalUIMessageDE) && File.Exists(DeflaktorASMUIMessageDE))
+                    if (patchToWiimmfiToolStripMenuItem.Checked)
                     {
-                        File.Delete(originalUIMessageDE);
-                        File.Copy(DeflaktorASMUIMessageDE, originalUIMessageDE);
-                    }
+                        if (File.Exists(originalUIMessageDE) && File.Exists(DeflaktorASMUIMessageDEPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageDEPlusWiimmfi, originalUIMessageDE);
+                        }
 
-                    if (File.Exists(originalUIMessageEN) && File.Exists(DeflaktorASMUIMessageEN))
+                        if (File.Exists(originalUIMessageEN) && File.Exists(DeflaktorASMUIMessageENPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageENPlusWiimmfi, originalUIMessageEN);
+                        }
+                        if (File.Exists(originalUIMessageUK) && File.Exists(DeflaktorASMUIMessageUKPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageUKPlusWiimmfi, originalUIMessageUK);
+                        }
+                    }
+                    else
                     {
-                        File.Delete(originalUIMessageEN);
-                        File.Copy(DeflaktorASMUIMessageEN, originalUIMessageEN);
+                        if (File.Exists(originalUIMessageDE) && File.Exists(DeflaktorASMUIMessageDE))
+                        {
+                            MoveFile(DeflaktorASMUIMessageDE, originalUIMessageDE);
+                        }
+
+                        if (File.Exists(originalUIMessageEN) && File.Exists(DeflaktorASMUIMessageEN))
+                        {
+                            MoveFile(DeflaktorASMUIMessageEN, originalUIMessageEN);
+                        }
+                        if (File.Exists(originalUIMessageUK) && File.Exists(DeflaktorASMUIMessageUK))
+                        {
+                            MoveFile(DeflaktorASMUIMessageUK, originalUIMessageUK);
+                        }
                     }
                         
                 }
@@ -860,20 +1002,77 @@ namespace CustomStreetManager
                 {
                     if (File.Exists(originalBootDol2) && File.Exists(DeflaktorASMBootDol))
                     {
-                        File.Delete(originalBootDol2);
-                        File.Copy(DeflaktorASMBootDol, originalBootDol2);
+                        MoveFile(DeflaktorASMBootDol, originalBootDol2);
                     }
 
-                    if (File.Exists(originalUIMessageDE2) && File.Exists(DeflaktorASMUIMessageDE))
+                    if (patchToWiimmfiToolStripMenuItem.Checked)
                     {
-                        File.Delete(originalUIMessageDE2);
-                        File.Copy(DeflaktorASMUIMessageDE, originalUIMessageDE2);
-                    }
+                        if (File.Exists(originalUIMessageDE2) && File.Exists(DeflaktorASMUIMessageDEPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageDEPlusWiimmfi, originalUIMessageDE2);
+                        }
 
-                    if (File.Exists(originalUIMessageEN2) && File.Exists(DeflaktorASMUIMessageEN))
+                        if (File.Exists(originalUIMessageEN2) && File.Exists(DeflaktorASMUIMessageENPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageENPlusWiimmfi, originalUIMessageEN2);
+                        }
+                        if (File.Exists(originalUIMessageUK) && File.Exists(DeflaktorASMUIMessageUKPlusWiimmfi))
+                        {
+                            MoveFile(DeflaktorASMUIMessageUKPlusWiimmfi, originalUIMessageUK2);
+                        }
+                    }
+                    else
                     {
-                        File.Delete(originalUIMessageEN2);
-                        File.Copy(DeflaktorASMUIMessageEN, originalUIMessageEN2);
+                        if (File.Exists(originalUIMessageDE2) && File.Exists(DeflaktorASMUIMessageDE))
+                        {
+                            MoveFile(DeflaktorASMUIMessageDE, originalUIMessageDE2);
+                        }
+
+                        if (File.Exists(originalUIMessageEN2) && File.Exists(DeflaktorASMUIMessageEN))
+                        {
+                            MoveFile(DeflaktorASMUIMessageEN, originalUIMessageEN2);
+                        }
+                        if (File.Exists(originalUIMessageUK2) && File.Exists(DeflaktorASMUIMessageUK))
+                        {
+                            MoveFile(DeflaktorASMUIMessageUK, originalUIMessageUK2);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void UpdateUIForWiimmfi() //updates the UI when Wiimmfi is being patched in, and the ASM hacks aren't. (They do their own UI stuff).
+        {
+            if(patchToWiimmfiToolStripMenuItem.Checked && !deflaktorsASMHacksToolStripMenuItem.Checked)
+            {
+                if (dir1)
+                {
+                    if (File.Exists(USWiimmfiUIUpdateFile) && File.Exists(originalUIMessageEN))
+                    {
+                        MoveFile(USWiimmfiUIUpdateFile, originalUIMessageEN);
+                    }
+                    if (File.Exists(UKWiimmfiUIUpdateFile) && File.Exists(originalUIMessageUK))
+                    {
+                        MoveFile(UKWiimmfiUIUpdateFile, originalUIMessageUK);
+                    }
+                    if (File.Exists(DEWiimmfiUIUpdateFile) && File.Exists(originalUIMessageDE))
+                    {
+                        MoveFile(DEWiimmfiUIUpdateFile, originalUIMessageDE);
+                    }
+                }
+                else if (dir2)
+                {
+                    if (File.Exists(USWiimmfiUIUpdateFile) && File.Exists(originalUIMessageEN2))
+                    {
+                        MoveFile(USWiimmfiUIUpdateFile, originalUIMessageEN2);
+                    }
+                    if (File.Exists(UKWiimmfiUIUpdateFile) && File.Exists(originalUIMessageUK2))
+                    {
+                        MoveFile(UKWiimmfiUIUpdateFile, originalUIMessageUK2);
+                    }
+                    if (File.Exists(DEWiimmfiUIUpdateFile) && File.Exists(originalUIMessageDE2))
+                    {
+                        MoveFile(DEWiimmfiUIUpdateFile, originalUIMessageDE2);
                     }
                 }
             }
@@ -910,10 +1109,10 @@ namespace CustomStreetManager
             }
         }
 
-        private void MoveMapFile(string newMapPath, string mapToReplacePath)
+        private void MoveFile(string newFilePath, string fileToReplacePath)
         {
-            File.Delete(mapToReplacePath);
-            File.Copy(newMapPath, mapToReplacePath);
+            File.Delete(fileToReplacePath);
+            File.Copy(newFilePath, fileToReplacePath, true);
         }
 
 
@@ -1726,7 +1925,7 @@ namespace CustomStreetManager
             }
             else
             {
-                setOutputPathLabel.Text = "";
+                setOutputPathLabel.Text = "None";
             }     
         }
 
@@ -1744,7 +1943,7 @@ namespace CustomStreetManager
             }
             else
             {
-                setInputISOLocation.Text = "";
+                setInputISOLocation.Text = "None";
             }
         }
 
@@ -1965,6 +2164,11 @@ namespace CustomStreetManager
                     dynTheColossusButton.Checked = false;
                 }
             }
+        }
+
+        private void patchToWiimmfiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

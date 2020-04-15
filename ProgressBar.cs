@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CustomStreetManager
 {
@@ -37,20 +38,16 @@ namespace CustomStreetManager
             {
                 mapReplaceProgressBar.Value = num;
             }
-                
-            //if (mapReplaceProgressBar.Value > 100)
-            //{
-            //    mapReplaceProgressBar.Value = 100;
-            //}
-            //else if (mapReplaceProgressBar.Value < 0)
-            //{
-            //    mapReplaceProgressBar.Value = 0;
-            //}
         }
 
         public void SetButtonToClose()
         {
             cancelButton.Text = "Close";
+        }
+
+        public void SetButtonToGoBack()
+        {
+            cancelButton.Text = "Go Back";
         }
 
         private void progressLabel_Click(object sender, EventArgs e)
@@ -61,7 +58,18 @@ namespace CustomStreetManager
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
+            if (cancelButton.Text == "Go Back")
+            {
+                //I don't want to quit the app if there's an error, but I do want to remove the working directory folder.
+                if (Directory.Exists("..\\_working_directory\\"))
+                {
+                    Directory.Delete("..\\_working_directory\\");
+                }
+            }
+            else if (cancelButton.Text == "Close") 
+            {
+                Application.Exit();
+            }
         }
     }
 }

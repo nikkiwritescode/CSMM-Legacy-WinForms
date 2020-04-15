@@ -25,5 +25,10 @@ namespace CustomStreetManager
         {
 
         }
+
+        private void csmmNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

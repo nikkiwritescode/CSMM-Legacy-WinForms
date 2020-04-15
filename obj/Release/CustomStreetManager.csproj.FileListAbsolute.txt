@@ -1,6 +1,5 @@
 C:\Users\nikki\source\repos\CustomStreetManager\bin\Release\CustomStreetManager.exe
 C:\Users\nikki\source\repos\CustomStreetManager\bin\Release\CustomStreetManager.pdb
-C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.csprojAssemblyReference.cache
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.Form1.resources
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.Properties.Resources.resources
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.csproj.GenerateResource.cache
@@ -8,3 +7,5 @@ C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.pdb
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.ProgressBar.resources
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.AboutPanel.resources
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.csproj.CoreCompileInputs.cache
+C:\Users\nikki\source\repos\CustomStreetManager\obj\Release\CustomStreetManager.csprojAssemblyReference.cache

@@ -52,12 +52,13 @@
             this.csmmNameLabel.Name = "csmmNameLabel";
             this.csmmNameLabel.Size = new System.Drawing.Size(196, 13);
             this.csmmNameLabel.TabIndex = 1;
-            this.csmmNameLabel.Text = "Custom Street Map Manager 0.92";
+            this.csmmNameLabel.Text = "Custom Street Map Manager 0.93";
+            this.csmmNameLabel.Click += new System.EventHandler(this.csmmNameLabel_Click);
             // 
             // companyLabel
             // 
             this.companyLabel.AutoSize = true;
-            this.companyLabel.Location = new System.Drawing.Point(70, 44);
+            this.companyLabel.Location = new System.Drawing.Point(71, 44);
             this.companyLabel.Name = "companyLabel";
             this.companyLabel.Size = new System.Drawing.Size(118, 13);
             this.companyLabel.TabIndex = 2;
@@ -66,12 +67,12 @@
             // nikkumsHouseURLLabel
             // 
             this.nikkumsHouseURLLabel.AutoSize = true;
-            this.nikkumsHouseURLLabel.Location = new System.Drawing.Point(84, 57);
+            this.nikkumsHouseURLLabel.Location = new System.Drawing.Point(71, 57);
             this.nikkumsHouseURLLabel.Name = "nikkumsHouseURLLabel";
-            this.nikkumsHouseURLLabel.Size = new System.Drawing.Size(93, 13);
+            this.nikkumsHouseURLLabel.Size = new System.Drawing.Size(125, 13);
             this.nikkumsHouseURLLabel.TabIndex = 3;
             this.nikkumsHouseURLLabel.TabStop = true;
-            this.nikkumsHouseURLLabel.Text = "https://nikkums.io";
+            this.nikkumsHouseURLLabel.Text = "https://nikkums.io/csmm";
             // 
             // AboutPanel
             // 
