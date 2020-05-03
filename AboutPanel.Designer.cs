@@ -36,9 +36,10 @@
             // 
             // aboutOKButton
             // 
-            this.aboutOKButton.Location = new System.Drawing.Point(83, 95);
+            this.aboutOKButton.Location = new System.Drawing.Point(194, 212);
+            this.aboutOKButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.aboutOKButton.Name = "aboutOKButton";
-            this.aboutOKButton.Size = new System.Drawing.Size(94, 41);
+            this.aboutOKButton.Size = new System.Drawing.Size(219, 91);
             this.aboutOKButton.TabIndex = 0;
             this.aboutOKButton.Text = "OK";
             this.aboutOKButton.UseVisualStyleBackColor = true;
@@ -48,42 +49,46 @@
             // 
             this.csmmNameLabel.AutoSize = true;
             this.csmmNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.csmmNameLabel.Location = new System.Drawing.Point(40, 21);
+            this.csmmNameLabel.Location = new System.Drawing.Point(93, 47);
+            this.csmmNameLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.csmmNameLabel.Name = "csmmNameLabel";
-            this.csmmNameLabel.Size = new System.Drawing.Size(196, 13);
+            this.csmmNameLabel.Size = new System.Drawing.Size(438, 29);
             this.csmmNameLabel.TabIndex = 1;
-            this.csmmNameLabel.Text = "Custom Street Map Manager 0.93";
+            this.csmmNameLabel.Text = "Custom Street Map Manager 0.93b";
             this.csmmNameLabel.Click += new System.EventHandler(this.csmmNameLabel_Click);
             // 
             // companyLabel
             // 
             this.companyLabel.AutoSize = true;
-            this.companyLabel.Location = new System.Drawing.Point(71, 44);
+            this.companyLabel.Location = new System.Drawing.Point(166, 98);
+            this.companyLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.companyLabel.Name = "companyLabel";
-            this.companyLabel.Size = new System.Drawing.Size(118, 13);
+            this.companyLabel.Size = new System.Drawing.Size(260, 29);
             this.companyLabel.TabIndex = 2;
             this.companyLabel.Text = "©2020 Nikkums House";
             // 
             // nikkumsHouseURLLabel
             // 
             this.nikkumsHouseURLLabel.AutoSize = true;
-            this.nikkumsHouseURLLabel.Location = new System.Drawing.Point(71, 57);
+            this.nikkumsHouseURLLabel.Location = new System.Drawing.Point(166, 127);
+            this.nikkumsHouseURLLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.nikkumsHouseURLLabel.Name = "nikkumsHouseURLLabel";
-            this.nikkumsHouseURLLabel.Size = new System.Drawing.Size(125, 13);
+            this.nikkumsHouseURLLabel.Size = new System.Drawing.Size(269, 29);
             this.nikkumsHouseURLLabel.TabIndex = 3;
             this.nikkumsHouseURLLabel.TabStop = true;
             this.nikkumsHouseURLLabel.Text = "https://nikkums.io/csmm";
             // 
             // AboutPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 148);
+            this.ClientSize = new System.Drawing.Size(625, 330);
             this.Controls.Add(this.nikkumsHouseURLLabel);
             this.Controls.Add(this.companyLabel);
             this.Controls.Add(this.csmmNameLabel);
             this.Controls.Add(this.aboutOKButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.MinimizeBox = false;
             this.Name = "AboutPanel";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
