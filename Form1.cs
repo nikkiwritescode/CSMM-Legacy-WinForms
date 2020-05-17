@@ -12,9 +12,9 @@ namespace CustomStreetManager
     public partial class Form1 : Form
     {
         //Disc Operations
-        string ExtractDiscFilePath = @".\_windowspatchscript_extractDisc.bat";
-        string CompileDiscFilePath = @".\_windowspatchscript_compileDisc.bat";
-        string CompileDiscWithWiimmfiFilePath = @".\_windowspatchscript_compileDiscwithWiimmfi.bat";
+        string ExtractDiscFileName = "_windowspatchscript_extractDisc.bat";
+        string CompileDiscFileName = "_windowspatchscript_compileDisc.bat";
+        string CompileDiscWithWiimmfiFileName = "_windowspatchscript_compileDiscwithWiimmfi.bat";
 
         //Other Options
         string DeflaktorASMBootDol = @"..\_asm\main.dol";
@@ -183,6 +183,11 @@ namespace CustomStreetManager
             InitializeComponent();
         }
 
+        public void Awake()
+        {
+            Directory.SetCurrentDirectory(Directory.GetCurrentDirectory());
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -222,18 +227,22 @@ namespace CustomStreetManager
 
         private void UpdateMapButton_Click(object sender, EventArgs e)
         {
+            string extractDiscBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), ExtractDiscFileName);
+
             ProgressBar instance = new ProgressBar();
             instance.Show();
 
             UpdateProgressWindow(instance, "Extracting disc...", 25);
+
             if (File.Exists(setInputISOLocation.Text))
             {
                 if (setOutputPathLabel.Text != "None")
                 {
-                    ProcessStartInfo psi = new ProcessStartInfo(ExtractDiscFilePath, Arguments);
+                    ProcessStartInfo psi = new ProcessStartInfo(extractDiscBatFilePath, Arguments);
                     psi.Arguments = "\"" + setInputISOLocation.Text + "\"";
                     psi.CreateNoWindow = true;
                     psi.UseShellExecute = false;
+                    psi.WorkingDirectory = Directory.GetCurrentDirectory();
 
                     var p = Process.Start(psi);
                     p.WaitForExit();
@@ -1086,23 +1095,28 @@ namespace CustomStreetManager
 
         private void CompileTheDisc()
         {
-            if (File.Exists(CompileDiscFilePath))
+            string compileDiscBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), CompileDiscFileName);
+            string compileDiscWithWiimmfiBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), CompileDiscWithWiimmfiFileName);
+            
+            if (File.Exists(compileDiscBatFilePath) || File.Exists(compileDiscWithWiimmfiBatFilePath))
             {
                 if (patchToWiimmfiToolStripMenuItem.Checked)
                 {
-                    ProcessStartInfo psi3 = new ProcessStartInfo(CompileDiscWithWiimmfiFilePath, Arguments);
+                    ProcessStartInfo psi3 = new ProcessStartInfo(compileDiscWithWiimmfiBatFilePath, Arguments);
                     psi3.Arguments = "\"" + setOutputPathLabel.Text + "\"";
                     psi3.CreateNoWindow = true;
                     psi3.UseShellExecute = false;
+                    psi3.WorkingDirectory = Directory.GetCurrentDirectory();
                     var p3 = Process.Start(psi3);
                     p3.WaitForExit();
                 }
                 else if (!patchToWiimmfiToolStripMenuItem.Checked)
                 {
-                    ProcessStartInfo psi3 = new ProcessStartInfo(CompileDiscFilePath, Arguments);
+                    ProcessStartInfo psi3 = new ProcessStartInfo(compileDiscBatFilePath, Arguments);
                     psi3.Arguments = "\"" + setOutputPathLabel.Text + "\"";
                     psi3.CreateNoWindow = true;
                     psi3.UseShellExecute = false;
+                    psi3.WorkingDirectory = Directory.GetCurrentDirectory();
                     var p3 = Process.Start(psi3);
                     p3.WaitForExit();
                 }

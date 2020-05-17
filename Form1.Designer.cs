@@ -111,10 +111,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.whichMapShouldWeReplaceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whichMapShouldWeReplaceLabel.Location = new System.Drawing.Point(7, 16);
-            this.whichMapShouldWeReplaceLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.whichMapShouldWeReplaceLabel.Location = new System.Drawing.Point(3, 7);
             this.whichMapShouldWeReplaceLabel.Name = "whichMapShouldWeReplaceLabel";
-            this.whichMapShouldWeReplaceLabel.Size = new System.Drawing.Size(917, 38);
+            this.whichMapShouldWeReplaceLabel.Size = new System.Drawing.Size(393, 17);
             this.whichMapShouldWeReplaceLabel.TabIndex = 2;
             this.whichMapShouldWeReplaceLabel.Text = "Which map should we replace?";
             this.whichMapShouldWeReplaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,10 +122,9 @@
             // trodainButton
             // 
             this.trodainButton.AutoSize = true;
-            this.trodainButton.Location = new System.Drawing.Point(28, 118);
-            this.trodainButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.trodainButton.Location = new System.Drawing.Point(12, 53);
             this.trodainButton.Name = "trodainButton";
-            this.trodainButton.Size = new System.Drawing.Size(202, 33);
+            this.trodainButton.Size = new System.Drawing.Size(93, 17);
             this.trodainButton.TabIndex = 3;
             this.trodainButton.Text = "Castle Trodain";
             this.trodainButton.UseVisualStyleBackColor = true;
@@ -135,10 +133,9 @@
             // observatoryButton
             // 
             this.observatoryButton.AutoSize = true;
-            this.observatoryButton.Location = new System.Drawing.Point(28, 170);
-            this.observatoryButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.observatoryButton.Location = new System.Drawing.Point(12, 76);
             this.observatoryButton.Name = "observatoryButton";
-            this.observatoryButton.Size = new System.Drawing.Size(223, 33);
+            this.observatoryButton.Size = new System.Drawing.Size(104, 17);
             this.observatoryButton.TabIndex = 5;
             this.observatoryButton.Text = "The Observatory";
             this.observatoryButton.UseVisualStyleBackColor = true;
@@ -147,10 +144,9 @@
             // ghostShipButton
             // 
             this.ghostShipButton.AutoSize = true;
-            this.ghostShipButton.Location = new System.Drawing.Point(28, 221);
-            this.ghostShipButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.ghostShipButton.Location = new System.Drawing.Point(12, 99);
             this.ghostShipButton.Name = "ghostShipButton";
-            this.ghostShipButton.Size = new System.Drawing.Size(162, 33);
+            this.ghostShipButton.Size = new System.Drawing.Size(77, 17);
             this.ghostShipButton.TabIndex = 6;
             this.ghostShipButton.Text = "Ghost Ship";
             this.ghostShipButton.UseVisualStyleBackColor = true;
@@ -159,10 +155,9 @@
             // slimeniaButton
             // 
             this.slimeniaButton.AutoSize = true;
-            this.slimeniaButton.Location = new System.Drawing.Point(28, 272);
-            this.slimeniaButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.slimeniaButton.Location = new System.Drawing.Point(12, 122);
             this.slimeniaButton.Name = "slimeniaButton";
-            this.slimeniaButton.Size = new System.Drawing.Size(138, 33);
+            this.slimeniaButton.Size = new System.Drawing.Size(64, 17);
             this.slimeniaButton.TabIndex = 7;
             this.slimeniaButton.Text = "Slimenia";
             this.slimeniaButton.UseVisualStyleBackColor = true;
@@ -171,10 +166,9 @@
             // mtmagButton
             // 
             this.mtmagButton.AutoSize = true;
-            this.mtmagButton.Location = new System.Drawing.Point(28, 323);
-            this.mtmagButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.mtmagButton.Location = new System.Drawing.Point(12, 145);
             this.mtmagButton.Name = "mtmagButton";
-            this.mtmagButton.Size = new System.Drawing.Size(245, 33);
+            this.mtmagButton.Size = new System.Drawing.Size(114, 17);
             this.mtmagButton.TabIndex = 8;
             this.mtmagButton.Text = "Mt. Magmageddon";
             this.mtmagButton.UseVisualStyleBackColor = true;
@@ -183,10 +177,9 @@
             // rhrButton
             // 
             this.rhrButton.AutoSize = true;
-            this.rhrButton.Location = new System.Drawing.Point(28, 375);
-            this.rhrButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.rhrButton.Location = new System.Drawing.Point(12, 168);
             this.rhrButton.Name = "rhrButton";
-            this.rhrButton.Size = new System.Drawing.Size(258, 33);
+            this.rhrButton.Size = new System.Drawing.Size(120, 17);
             this.rhrButton.TabIndex = 9;
             this.rhrButton.Text = "Robbin\' Hood Ruins";
             this.rhrButton.UseVisualStyleBackColor = true;
@@ -196,10 +189,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Location = new System.Drawing.Point(5, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(263, 31);
+            this.label2.Size = new System.Drawing.Size(128, 15);
             this.label2.TabIndex = 15;
             this.label2.Text = "Dragon Quest Tour";
             // 
@@ -207,20 +199,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(345, 71);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label3.Location = new System.Drawing.Point(148, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 31);
+            this.label3.Size = new System.Drawing.Size(119, 15);
             this.label3.TabIndex = 22;
             this.label3.Text = "Super Mario Tour";
             // 
             // peachButton
             // 
             this.peachButton.AutoSize = true;
-            this.peachButton.Location = new System.Drawing.Point(364, 375);
-            this.peachButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.peachButton.Location = new System.Drawing.Point(156, 168);
             this.peachButton.Name = "peachButton";
-            this.peachButton.Size = new System.Drawing.Size(202, 33);
+            this.peachButton.Size = new System.Drawing.Size(95, 17);
             this.peachButton.TabIndex = 21;
             this.peachButton.Text = "Peach\'s Castle";
             this.peachButton.UseVisualStyleBackColor = true;
@@ -229,10 +219,9 @@
             // delfinoButton
             // 
             this.delfinoButton.AutoSize = true;
-            this.delfinoButton.Location = new System.Drawing.Point(364, 323);
-            this.delfinoButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.delfinoButton.Location = new System.Drawing.Point(156, 145);
             this.delfinoButton.Name = "delfinoButton";
-            this.delfinoButton.Size = new System.Drawing.Size(185, 33);
+            this.delfinoButton.Size = new System.Drawing.Size(87, 17);
             this.delfinoButton.TabIndex = 20;
             this.delfinoButton.Text = "Delfino Plaza";
             this.delfinoButton.UseVisualStyleBackColor = true;
@@ -241,10 +230,9 @@
             // yoshiButton
             // 
             this.yoshiButton.AutoSize = true;
-            this.yoshiButton.Location = new System.Drawing.Point(364, 272);
-            this.yoshiButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.yoshiButton.Location = new System.Drawing.Point(156, 122);
             this.yoshiButton.Name = "yoshiButton";
-            this.yoshiButton.Size = new System.Drawing.Size(191, 33);
+            this.yoshiButton.Size = new System.Drawing.Size(89, 17);
             this.yoshiButton.TabIndex = 19;
             this.yoshiButton.Text = "Yoshi\'s Island";
             this.yoshiButton.UseVisualStyleBackColor = true;
@@ -253,10 +241,9 @@
             // circuitButton
             // 
             this.circuitButton.AutoSize = true;
-            this.circuitButton.Location = new System.Drawing.Point(364, 221);
-            this.circuitButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.circuitButton.Location = new System.Drawing.Point(156, 99);
             this.circuitButton.Name = "circuitButton";
-            this.circuitButton.Size = new System.Drawing.Size(179, 33);
+            this.circuitButton.Size = new System.Drawing.Size(83, 17);
             this.circuitButton.TabIndex = 18;
             this.circuitButton.Text = "Mario Circuit";
             this.circuitButton.UseVisualStyleBackColor = true;
@@ -265,10 +252,9 @@
             // starshipButton
             // 
             this.starshipButton.AutoSize = true;
-            this.starshipButton.Location = new System.Drawing.Point(364, 170);
-            this.starshipButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.starshipButton.Location = new System.Drawing.Point(156, 76);
             this.starshipButton.Name = "starshipButton";
-            this.starshipButton.Size = new System.Drawing.Size(199, 33);
+            this.starshipButton.Size = new System.Drawing.Size(92, 17);
             this.starshipButton.TabIndex = 17;
             this.starshipButton.Text = "Starship Mario";
             this.starshipButton.UseVisualStyleBackColor = true;
@@ -277,10 +263,9 @@
             // stadiumButton
             // 
             this.stadiumButton.AutoSize = true;
-            this.stadiumButton.Location = new System.Drawing.Point(364, 118);
-            this.stadiumButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.stadiumButton.Location = new System.Drawing.Point(156, 53);
             this.stadiumButton.Name = "stadiumButton";
-            this.stadiumButton.Size = new System.Drawing.Size(199, 33);
+            this.stadiumButton.Size = new System.Drawing.Size(92, 17);
             this.stadiumButton.TabIndex = 16;
             this.stadiumButton.Text = "Mario Stadium";
             this.stadiumButton.UseVisualStyleBackColor = true;
@@ -290,20 +275,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(642, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label4.Location = new System.Drawing.Point(275, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 31);
+            this.label4.Size = new System.Drawing.Size(88, 15);
             this.label4.TabIndex = 29;
             this.label4.Text = "Special Tour";
             // 
             // alltradesButton
             // 
             this.alltradesButton.AutoSize = true;
-            this.alltradesButton.Location = new System.Drawing.Point(656, 375);
-            this.alltradesButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.alltradesButton.Location = new System.Drawing.Point(281, 168);
             this.alltradesButton.Name = "alltradesButton";
-            this.alltradesButton.Size = new System.Drawing.Size(212, 33);
+            this.alltradesButton.Size = new System.Drawing.Size(98, 17);
             this.alltradesButton.TabIndex = 28;
             this.alltradesButton.Text = "Alltrades Abbey";
             this.alltradesButton.UseVisualStyleBackColor = true;
@@ -312,10 +295,9 @@
             // colossusButton
             // 
             this.colossusButton.AutoSize = true;
-            this.colossusButton.Location = new System.Drawing.Point(656, 323);
-            this.colossusButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.colossusButton.Location = new System.Drawing.Point(281, 145);
             this.colossusButton.Name = "colossusButton";
-            this.colossusButton.Size = new System.Drawing.Size(144, 33);
+            this.colossusButton.Size = new System.Drawing.Size(67, 17);
             this.colossusButton.TabIndex = 27;
             this.colossusButton.Text = "Colossus";
             this.colossusButton.UseVisualStyleBackColor = true;
@@ -324,10 +306,9 @@
             // gegButton
             // 
             this.gegButton.AutoSize = true;
-            this.gegButton.Location = new System.Drawing.Point(656, 272);
-            this.gegButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.gegButton.Location = new System.Drawing.Point(281, 122);
             this.gegButton.Name = "gegButton";
-            this.gegButton.Size = new System.Drawing.Size(232, 33);
+            this.gegButton.Size = new System.Drawing.Size(108, 17);
             this.gegButton.TabIndex = 26;
             this.gegButton.Text = "Good Egg Galaxy";
             this.gegButton.UseVisualStyleBackColor = true;
@@ -336,10 +317,9 @@
             // bowserButton
             // 
             this.bowserButton.AutoSize = true;
-            this.bowserButton.Location = new System.Drawing.Point(656, 221);
-            this.bowserButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.bowserButton.Location = new System.Drawing.Point(281, 99);
             this.bowserButton.Name = "bowserButton";
-            this.bowserButton.Size = new System.Drawing.Size(216, 33);
+            this.bowserButton.Size = new System.Drawing.Size(99, 17);
             this.bowserButton.TabIndex = 25;
             this.bowserButton.Text = "Bowser\'s Castle";
             this.bowserButton.UseVisualStyleBackColor = true;
@@ -348,10 +328,9 @@
             // smbButton
             // 
             this.smbButton.AutoSize = true;
-            this.smbButton.Location = new System.Drawing.Point(656, 170);
-            this.smbButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.smbButton.Location = new System.Drawing.Point(281, 76);
             this.smbButton.Name = "smbButton";
-            this.smbButton.Size = new System.Drawing.Size(238, 33);
+            this.smbButton.Size = new System.Drawing.Size(109, 17);
             this.smbButton.TabIndex = 24;
             this.smbButton.Text = "Super Mario Bros.";
             this.smbButton.UseVisualStyleBackColor = true;
@@ -360,10 +339,9 @@
             // alefgardButton
             // 
             this.alefgardButton.AutoSize = true;
-            this.alefgardButton.Location = new System.Drawing.Point(656, 118);
-            this.alefgardButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.alefgardButton.Location = new System.Drawing.Point(281, 53);
             this.alefgardButton.Name = "alefgardButton";
-            this.alefgardButton.Size = new System.Drawing.Size(134, 33);
+            this.alefgardButton.Size = new System.Drawing.Size(64, 17);
             this.alefgardButton.TabIndex = 23;
             this.alefgardButton.Text = "Alefgard";
             this.alefgardButton.UseVisualStyleBackColor = true;
@@ -375,10 +353,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.replaceButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.replaceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.replaceButton.Location = new System.Drawing.Point(677, 645);
-            this.replaceButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.replaceButton.Location = new System.Drawing.Point(290, 289);
             this.replaceButton.Name = "replaceButton";
-            this.replaceButton.Size = new System.Drawing.Size(943, 69);
+            this.replaceButton.Size = new System.Drawing.Size(404, 31);
             this.replaceButton.TabIndex = 30;
             this.replaceButton.Text = "Go!";
             this.replaceButton.UseVisualStyleBackColor = true;
@@ -388,10 +365,10 @@
             // 
             this.noneButton.AutoSize = true;
             this.noneButton.Checked = true;
-            this.noneButton.Location = new System.Drawing.Point(411, 426);
-            this.noneButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.noneButton.Location = new System.Drawing.Point(176, 191);
+            this.noneButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.noneButton.Name = "noneButton";
-            this.noneButton.Size = new System.Drawing.Size(103, 33);
+            this.noneButton.Size = new System.Drawing.Size(51, 17);
             this.noneButton.TabIndex = 34;
             this.noneButton.TabStop = true;
             this.noneButton.Text = "None";
@@ -400,10 +377,10 @@
             // 
             // addMapButton
             // 
-            this.addMapButton.Location = new System.Drawing.Point(7, 645);
-            this.addMapButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addMapButton.Location = new System.Drawing.Point(3, 289);
+            this.addMapButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.addMapButton.Name = "addMapButton";
-            this.addMapButton.Size = new System.Drawing.Size(222, 69);
+            this.addMapButton.Size = new System.Drawing.Size(95, 31);
             this.addMapButton.TabIndex = 35;
             this.addMapButton.Text = "Add map";
             this.addMapButton.UseVisualStyleBackColor = true;
@@ -411,10 +388,10 @@
             // 
             // clearListButton
             // 
-            this.clearListButton.Location = new System.Drawing.Point(446, 645);
-            this.clearListButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clearListButton.Location = new System.Drawing.Point(191, 289);
+            this.clearListButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.clearListButton.Name = "clearListButton";
-            this.clearListButton.Size = new System.Drawing.Size(222, 69);
+            this.clearListButton.Size = new System.Drawing.Size(95, 31);
             this.clearListButton.TabIndex = 37;
             this.clearListButton.Text = "Clear list";
             this.clearListButton.UseVisualStyleBackColor = true;
@@ -430,10 +407,10 @@
             this.dynOrderHeader});
             this.listOfMapsToPatchIn.FullRowSelect = true;
             this.listOfMapsToPatchIn.HideSelection = false;
-            this.listOfMapsToPatchIn.Location = new System.Drawing.Point(7, 56);
-            this.listOfMapsToPatchIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listOfMapsToPatchIn.Location = new System.Drawing.Point(3, 25);
+            this.listOfMapsToPatchIn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.listOfMapsToPatchIn.Name = "listOfMapsToPatchIn";
-            this.listOfMapsToPatchIn.Size = new System.Drawing.Size(660, 580);
+            this.listOfMapsToPatchIn.Size = new System.Drawing.Size(285, 262);
             this.listOfMapsToPatchIn.TabIndex = 39;
             this.listOfMapsToPatchIn.UseCompatibleStateImageBehavior = false;
             this.listOfMapsToPatchIn.View = System.Windows.Forms.View.Details;
@@ -466,10 +443,10 @@
             // 
             // removeMapButton
             // 
-            this.removeMapButton.Location = new System.Drawing.Point(233, 645);
-            this.removeMapButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.removeMapButton.Location = new System.Drawing.Point(100, 289);
+            this.removeMapButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.removeMapButton.Name = "removeMapButton";
-            this.removeMapButton.Size = new System.Drawing.Size(208, 69);
+            this.removeMapButton.Size = new System.Drawing.Size(89, 31);
             this.removeMapButton.TabIndex = 40;
             this.removeMapButton.Text = "Remove map";
             this.removeMapButton.UseVisualStyleBackColor = true;
@@ -506,16 +483,14 @@
             this.panel1.Controls.Add(this.delfinoButton);
             this.panel1.Controls.Add(this.smbButton);
             this.panel1.Controls.Add(this.peachButton);
-            this.panel1.Location = new System.Drawing.Point(677, 56);
-            this.panel1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.panel1.Location = new System.Drawing.Point(290, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 473);
+            this.panel1.Size = new System.Drawing.Size(404, 212);
             this.panel1.TabIndex = 41;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -523,8 +498,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1629, 45);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(698, 24);
             this.menuStrip1.TabIndex = 42;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -533,13 +508,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(80, 41);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(209, 48);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -550,7 +525,7 @@
             this.removeIntroMenuAndMapBgmToolStripMenuItem,
             this.patchToWiimmfiToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(239, 41);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.optionsToolStripMenuItem.Text = "Optional Patches";
             // 
             // deflaktorsASMHacksToolStripMenuItem
@@ -558,7 +533,7 @@
             this.deflaktorsASMHacksToolStripMenuItem.CheckOnClick = true;
             this.deflaktorsASMHacksToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deflaktorsASMHacksToolStripMenuItem.Name = "deflaktorsASMHacksToolStripMenuItem";
-            this.deflaktorsASMHacksToolStripMenuItem.Size = new System.Drawing.Size(585, 48);
+            this.deflaktorsASMHacksToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.deflaktorsASMHacksToolStripMenuItem.Text = "Deflaktor\'s ASM Hacks (PAL ONLY)";
             this.deflaktorsASMHacksToolStripMenuItem.Click += new System.EventHandler(this.deflaktorsASMHacksToolStripMenuItem_Click);
             // 
@@ -567,7 +542,7 @@
             this.removeIntroMenuAndMapBgmToolStripMenuItem.CheckOnClick = true;
             this.removeIntroMenuAndMapBgmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Name = "removeIntroMenuAndMapBgmToolStripMenuItem";
-            this.removeIntroMenuAndMapBgmToolStripMenuItem.Size = new System.Drawing.Size(585, 48);
+            this.removeIntroMenuAndMapBgmToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Text = "Remove intro, menu, and map bgm";
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Click += new System.EventHandler(this.removeIntroMenuAndMapBmgToolStripMenuItem_Click);
             // 
@@ -576,7 +551,7 @@
             this.patchToWiimmfiToolStripMenuItem.CheckOnClick = true;
             this.patchToWiimmfiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.patchToWiimmfiToolStripMenuItem.Name = "patchToWiimmfiToolStripMenuItem";
-            this.patchToWiimmfiToolStripMenuItem.Size = new System.Drawing.Size(585, 48);
+            this.patchToWiimmfiToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.patchToWiimmfiToolStripMenuItem.Text = "Wiimmfi";
             this.patchToWiimmfiToolStripMenuItem.Click += new System.EventHandler(this.patchToWiimmfiToolStripMenuItem_Click);
             // 
@@ -585,22 +560,21 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutCustomStreetMapManagerToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(95, 41);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutCustomStreetMapManagerToolStripMenuItem
             // 
             this.aboutCustomStreetMapManagerToolStripMenuItem.Name = "aboutCustomStreetMapManagerToolStripMenuItem";
-            this.aboutCustomStreetMapManagerToolStripMenuItem.Size = new System.Drawing.Size(605, 48);
+            this.aboutCustomStreetMapManagerToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
             this.aboutCustomStreetMapManagerToolStripMenuItem.Text = "About Custom Street Map Manager...";
             this.aboutCustomStreetMapManagerToolStripMenuItem.Click += new System.EventHandler(this.aboutCustomStreetMapManagerToolStripMenuItem_Click);
             // 
             // setOutputLocationButton
             // 
-            this.setOutputLocationButton.Location = new System.Drawing.Point(677, 589);
-            this.setOutputLocationButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.setOutputLocationButton.Location = new System.Drawing.Point(290, 264);
             this.setOutputLocationButton.Name = "setOutputLocationButton";
-            this.setOutputLocationButton.Size = new System.Drawing.Size(271, 51);
+            this.setOutputLocationButton.Size = new System.Drawing.Size(116, 23);
             this.setOutputLocationButton.TabIndex = 43;
             this.setOutputLocationButton.Text = "Set Output ISO";
             this.setOutputLocationButton.UseVisualStyleBackColor = true;
@@ -609,20 +583,18 @@
             // setOutputPathLabel
             // 
             this.setOutputPathLabel.AutoEllipsis = true;
-            this.setOutputPathLabel.Location = new System.Drawing.Point(961, 589);
-            this.setOutputPathLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.setOutputPathLabel.Location = new System.Drawing.Point(412, 264);
             this.setOutputPathLabel.Name = "setOutputPathLabel";
-            this.setOutputPathLabel.Size = new System.Drawing.Size(658, 47);
+            this.setOutputPathLabel.Size = new System.Drawing.Size(282, 21);
             this.setOutputPathLabel.TabIndex = 44;
             this.setOutputPathLabel.Text = "None";
             this.setOutputPathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(677, 535);
-            this.button1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.button1.Location = new System.Drawing.Point(290, 240);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(271, 51);
+            this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 45;
             this.button1.Text = "Set Input WBFS/ISO";
             this.button1.UseVisualStyleBackColor = true;
@@ -630,10 +602,9 @@
             // 
             // setInputISOLocation
             // 
-            this.setInputISOLocation.Location = new System.Drawing.Point(961, 535);
-            this.setInputISOLocation.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.setInputISOLocation.Location = new System.Drawing.Point(412, 240);
             this.setInputISOLocation.Name = "setInputISOLocation";
-            this.setInputISOLocation.Size = new System.Drawing.Size(658, 51);
+            this.setInputISOLocation.Size = new System.Drawing.Size(282, 23);
             this.setInputISOLocation.TabIndex = 46;
             this.setInputISOLocation.Text = "None";
             this.setInputISOLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -653,20 +624,18 @@
             this.dynamicMapPanel.Controls.Add(this.dynMap3Label);
             this.dynamicMapPanel.Controls.Add(this.dynMap2Label);
             this.dynamicMapPanel.Controls.Add(this.dynMapLabel1);
-            this.dynamicMapPanel.Location = new System.Drawing.Point(677, 56);
-            this.dynamicMapPanel.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dynamicMapPanel.Location = new System.Drawing.Point(290, 25);
             this.dynamicMapPanel.Name = "dynamicMapPanel";
-            this.dynamicMapPanel.Size = new System.Drawing.Size(943, 473);
+            this.dynamicMapPanel.Size = new System.Drawing.Size(404, 212);
             this.dynamicMapPanel.TabIndex = 35;
             this.dynamicMapPanel.Visible = false;
             // 
             // dynTheColossusButton
             // 
             this.dynTheColossusButton.AutoSize = true;
-            this.dynTheColossusButton.Location = new System.Drawing.Point(259, 386);
-            this.dynTheColossusButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dynTheColossusButton.Location = new System.Drawing.Point(111, 188);
             this.dynTheColossusButton.Name = "dynTheColossusButton";
-            this.dynTheColossusButton.Size = new System.Drawing.Size(349, 33);
+            this.dynTheColossusButton.Size = new System.Drawing.Size(157, 17);
             this.dynTheColossusButton.TabIndex = 16;
             this.dynTheColossusButton.TabStop = true;
             this.dynTheColossusButton.Text = "The Colossus (max: 2 maps)";
@@ -676,10 +645,9 @@
             // dynMtMagButton
             // 
             this.dynMtMagButton.AutoSize = true;
-            this.dynMtMagButton.Location = new System.Drawing.Point(259, 335);
-            this.dynMtMagButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dynMtMagButton.Location = new System.Drawing.Point(111, 165);
             this.dynMtMagButton.Name = "dynMtMagButton";
-            this.dynMtMagButton.Size = new System.Drawing.Size(401, 33);
+            this.dynMtMagButton.Size = new System.Drawing.Size(182, 17);
             this.dynMtMagButton.TabIndex = 15;
             this.dynMtMagButton.TabStop = true;
             this.dynMtMagButton.Text = "Mt. Magmageddon (max: 2 maps)";
@@ -690,10 +658,9 @@
             // 
             this.dynTheObservatoryButton.AutoSize = true;
             this.dynTheObservatoryButton.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.dynTheObservatoryButton.Location = new System.Drawing.Point(259, 283);
-            this.dynTheObservatoryButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.dynTheObservatoryButton.Location = new System.Drawing.Point(111, 142);
             this.dynTheObservatoryButton.Name = "dynTheObservatoryButton";
-            this.dynTheObservatoryButton.Size = new System.Drawing.Size(379, 33);
+            this.dynTheObservatoryButton.Size = new System.Drawing.Size(172, 17);
             this.dynTheObservatoryButton.TabIndex = 14;
             this.dynTheObservatoryButton.TabStop = true;
             this.dynTheObservatoryButton.Text = "The Observatory (max: 4 maps)";
@@ -703,10 +670,9 @@
             // settingADynamicMap
             // 
             this.settingADynamicMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingADynamicMap.Location = new System.Drawing.Point(7, 221);
-            this.settingADynamicMap.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.settingADynamicMap.Location = new System.Drawing.Point(3, 114);
             this.settingADynamicMap.Name = "settingADynamicMap";
-            this.settingADynamicMap.Size = new System.Drawing.Size(917, 56);
+            this.settingADynamicMap.Size = new System.Drawing.Size(393, 25);
             this.settingADynamicMap.TabIndex = 13;
             this.settingADynamicMap.Text = "Choose which map to replace:";
             this.settingADynamicMap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -716,10 +682,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(924, 51);
+            this.label1.Size = new System.Drawing.Size(396, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Place the map files in the correct order:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -729,72 +694,65 @@
             // 
             this.map4OrderDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.map4OrderDropdown.FormattingEnabled = true;
-            this.map4OrderDropdown.Location = new System.Drawing.Point(768, 143);
-            this.map4OrderDropdown.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.map4OrderDropdown.Location = new System.Drawing.Point(329, 85);
             this.map4OrderDropdown.MaxDropDownItems = 4;
             this.map4OrderDropdown.Name = "map4OrderDropdown";
-            this.map4OrderDropdown.Size = new System.Drawing.Size(88, 37);
+            this.map4OrderDropdown.Size = new System.Drawing.Size(40, 21);
             this.map4OrderDropdown.TabIndex = 11;
             // 
             // map3OrderDropdown
             // 
             this.map3OrderDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.map3OrderDropdown.FormattingEnabled = true;
-            this.map3OrderDropdown.Location = new System.Drawing.Point(534, 143);
-            this.map3OrderDropdown.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.map3OrderDropdown.Location = new System.Drawing.Point(229, 85);
             this.map3OrderDropdown.MaxDropDownItems = 4;
             this.map3OrderDropdown.Name = "map3OrderDropdown";
-            this.map3OrderDropdown.Size = new System.Drawing.Size(88, 37);
+            this.map3OrderDropdown.Size = new System.Drawing.Size(40, 21);
             this.map3OrderDropdown.TabIndex = 10;
             // 
             // map2OrderDropdown
             // 
             this.map2OrderDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.map2OrderDropdown.FormattingEnabled = true;
-            this.map2OrderDropdown.Location = new System.Drawing.Point(299, 143);
-            this.map2OrderDropdown.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.map2OrderDropdown.Location = new System.Drawing.Point(128, 85);
             this.map2OrderDropdown.MaxDropDownItems = 4;
             this.map2OrderDropdown.Name = "map2OrderDropdown";
-            this.map2OrderDropdown.Size = new System.Drawing.Size(88, 37);
+            this.map2OrderDropdown.Size = new System.Drawing.Size(40, 21);
             this.map2OrderDropdown.TabIndex = 9;
             // 
             // map1OrderDropdown
             // 
             this.map1OrderDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.map1OrderDropdown.FormattingEnabled = true;
-            this.map1OrderDropdown.Location = new System.Drawing.Point(63, 143);
-            this.map1OrderDropdown.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.map1OrderDropdown.Location = new System.Drawing.Point(27, 85);
             this.map1OrderDropdown.MaxDropDownItems = 4;
             this.map1OrderDropdown.Name = "map1OrderDropdown";
-            this.map1OrderDropdown.Size = new System.Drawing.Size(88, 37);
+            this.map1OrderDropdown.Size = new System.Drawing.Size(40, 21);
             this.map1OrderDropdown.TabIndex = 8;
             // 
             // dynMap4Label
             // 
-            this.dynMap4Label.Location = new System.Drawing.Point(707, 78);
-            this.dynMap4Label.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.dynMap4Label.Location = new System.Drawing.Point(303, 32);
             this.dynMap4Label.Name = "dynMap4Label";
-            this.dynMap4Label.Size = new System.Drawing.Size(224, 51);
+            this.dynMap4Label.Size = new System.Drawing.Size(96, 47);
             this.dynMap4Label.TabIndex = 7;
             this.dynMap4Label.Text = "map4";
             this.dynMap4Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dynMap3Label
             // 
-            this.dynMap3Label.Location = new System.Drawing.Point(476, 78);
-            this.dynMap3Label.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.dynMap3Label.Location = new System.Drawing.Point(204, 32);
             this.dynMap3Label.Name = "dynMap3Label";
-            this.dynMap3Label.Size = new System.Drawing.Size(224, 51);
+            this.dynMap3Label.Size = new System.Drawing.Size(96, 47);
             this.dynMap3Label.TabIndex = 6;
             this.dynMap3Label.Text = "map3";
             this.dynMap3Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dynMap2Label
             // 
-            this.dynMap2Label.Location = new System.Drawing.Point(238, 78);
-            this.dynMap2Label.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.dynMap2Label.Location = new System.Drawing.Point(102, 32);
             this.dynMap2Label.Name = "dynMap2Label";
-            this.dynMap2Label.Size = new System.Drawing.Size(224, 51);
+            this.dynMap2Label.Size = new System.Drawing.Size(96, 47);
             this.dynMap2Label.TabIndex = 5;
             this.dynMap2Label.Text = "map2";
             this.dynMap2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -802,19 +760,18 @@
             // 
             // dynMapLabel1
             // 
-            this.dynMapLabel1.Location = new System.Drawing.Point(2, 78);
-            this.dynMapLabel1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.dynMapLabel1.Location = new System.Drawing.Point(1, 32);
             this.dynMapLabel1.Name = "dynMapLabel1";
-            this.dynMapLabel1.Size = new System.Drawing.Size(224, 51);
+            this.dynMapLabel1.Size = new System.Drawing.Size(96, 50);
             this.dynMapLabel1.TabIndex = 4;
             this.dynMapLabel1.Text = "map1";
             this.dynMapLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1629, 729);
+            this.ClientSize = new System.Drawing.Size(698, 327);
             this.Controls.Add(this.dynamicMapPanel);
             this.Controls.Add(this.setInputISOLocation);
             this.Controls.Add(this.button1);
@@ -830,7 +787,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
