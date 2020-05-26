@@ -50,9 +50,9 @@
             this.csmmNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.csmmNameLabel.Location = new System.Drawing.Point(40, 21);
             this.csmmNameLabel.Name = "csmmNameLabel";
-            this.csmmNameLabel.Size = new System.Drawing.Size(203, 13);
+            this.csmmNameLabel.Size = new System.Drawing.Size(196, 13);
             this.csmmNameLabel.TabIndex = 1;
-            this.csmmNameLabel.Text = "Custom Street Map Manager 0.93d";
+            this.csmmNameLabel.Text = "Custom Street Map Manager 0.94";
             this.csmmNameLabel.Click += new System.EventHandler(this.csmmNameLabel_Click);
             // 
             // companyLabel
@@ -88,7 +88,7 @@
             this.Name = "AboutPanel";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About CSMM 0.93d";
+            this.Text = "About CSMM 0.94";
             this.Load += new System.EventHandler(this.AboutPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

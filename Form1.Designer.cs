@@ -366,7 +366,7 @@
             this.noneButton.AutoSize = true;
             this.noneButton.Checked = true;
             this.noneButton.Location = new System.Drawing.Point(176, 191);
-            this.noneButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.noneButton.Margin = new System.Windows.Forms.Padding(1);
             this.noneButton.Name = "noneButton";
             this.noneButton.Size = new System.Drawing.Size(51, 17);
             this.noneButton.TabIndex = 34;
@@ -378,7 +378,7 @@
             // addMapButton
             // 
             this.addMapButton.Location = new System.Drawing.Point(3, 289);
-            this.addMapButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.addMapButton.Margin = new System.Windows.Forms.Padding(1);
             this.addMapButton.Name = "addMapButton";
             this.addMapButton.Size = new System.Drawing.Size(95, 31);
             this.addMapButton.TabIndex = 35;
@@ -389,7 +389,7 @@
             // clearListButton
             // 
             this.clearListButton.Location = new System.Drawing.Point(191, 289);
-            this.clearListButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.clearListButton.Margin = new System.Windows.Forms.Padding(1);
             this.clearListButton.Name = "clearListButton";
             this.clearListButton.Size = new System.Drawing.Size(95, 31);
             this.clearListButton.TabIndex = 37;
@@ -408,7 +408,7 @@
             this.listOfMapsToPatchIn.FullRowSelect = true;
             this.listOfMapsToPatchIn.HideSelection = false;
             this.listOfMapsToPatchIn.Location = new System.Drawing.Point(3, 25);
-            this.listOfMapsToPatchIn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.listOfMapsToPatchIn.Margin = new System.Windows.Forms.Padding(1);
             this.listOfMapsToPatchIn.Name = "listOfMapsToPatchIn";
             this.listOfMapsToPatchIn.Size = new System.Drawing.Size(285, 262);
             this.listOfMapsToPatchIn.TabIndex = 39;
@@ -444,7 +444,7 @@
             // removeMapButton
             // 
             this.removeMapButton.Location = new System.Drawing.Point(100, 289);
-            this.removeMapButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.removeMapButton.Margin = new System.Windows.Forms.Padding(1);
             this.removeMapButton.Name = "removeMapButton";
             this.removeMapButton.Size = new System.Drawing.Size(89, 31);
             this.removeMapButton.TabIndex = 40;
@@ -514,7 +514,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -533,7 +533,7 @@
             this.deflaktorsASMHacksToolStripMenuItem.CheckOnClick = true;
             this.deflaktorsASMHacksToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deflaktorsASMHacksToolStripMenuItem.Name = "deflaktorsASMHacksToolStripMenuItem";
-            this.deflaktorsASMHacksToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.deflaktorsASMHacksToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.deflaktorsASMHacksToolStripMenuItem.Text = "Deflaktor\'s ASM Hacks (PAL ONLY)";
             this.deflaktorsASMHacksToolStripMenuItem.Click += new System.EventHandler(this.deflaktorsASMHacksToolStripMenuItem_Click);
             // 
@@ -542,8 +542,8 @@
             this.removeIntroMenuAndMapBgmToolStripMenuItem.CheckOnClick = true;
             this.removeIntroMenuAndMapBgmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Name = "removeIntroMenuAndMapBgmToolStripMenuItem";
-            this.removeIntroMenuAndMapBgmToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.removeIntroMenuAndMapBgmToolStripMenuItem.Text = "Remove intro, menu, and map bgm";
+            this.removeIntroMenuAndMapBgmToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.removeIntroMenuAndMapBgmToolStripMenuItem.Text = "Disable All Music";
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Click += new System.EventHandler(this.removeIntroMenuAndMapBmgToolStripMenuItem_Click);
             // 
             // patchToWiimmfiToolStripMenuItem
@@ -551,7 +551,7 @@
             this.patchToWiimmfiToolStripMenuItem.CheckOnClick = true;
             this.patchToWiimmfiToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.patchToWiimmfiToolStripMenuItem.Name = "patchToWiimmfiToolStripMenuItem";
-            this.patchToWiimmfiToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.patchToWiimmfiToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.patchToWiimmfiToolStripMenuItem.Text = "Wiimmfi";
             this.patchToWiimmfiToolStripMenuItem.Click += new System.EventHandler(this.patchToWiimmfiToolStripMenuItem_Click);
             // 

@@ -102,67 +102,18 @@ namespace CustomStreetManager
         string outputFolderPath = @"..\_patched_iso_will_go_here\";
         string vanillaISOFolderPath = @"..\_place_vanilla_iso_here\";
 
-        //MENU and INTRO BGM
+        //Music files
         //directory 1
-        string titleBGMFilePath = @"..\_working_directory\data\files\sound\stream\01_BGM_TITLE.brstm";
-        string miiSaveScreenBGMFilePath = @"..\_working_directory\data\files\sound\stream\01_ME_SAVE.brstm";
-        string demoReelBGMFilePath = @"..\_working_directory\data\files\sound\stream\02_BGM_DEMO.brstm";
-        string bannerBGMFilePath = @"..\_working_directory\data\files\sound\stream\03_BGM_BANNER.brstm";
-        string miiHolidayBGMFilePath = @"..\_working_directory\data\files\sound\stream\03_ME_HOLIDAY.brstm";
-        string saveLoadScreenBGMFilePath = @"..\_working_directory\data\files\sound\stream\04_BGM_SAVELOAD.brstm";
-        string menuBGMFilePath = @"..\_working_directory\data\files\sound\stream\05_BGM_MENU.brstm";
-        string fireworksSoundFilePath = @"..\_working_directory\data\files\sound\stream\19_ME_OP_FIREWORKS.brstm";
+        string soundConfig1 = @"..\_working_directory\DATA\files\sound\Itast.brsar";
+        string soundConfig2 = @"..\_working_directory\DATA\files\sound\Itast2.brsar";
+        string soundConfig3 = @"..\_working_directory\DATA\files\sound\Itast3.brsar";
 
         //directory 2
-        string titleBGMFilePath2 = @"..\_working_directory\files\sound\stream\01_BGM_TITLE.brstm";
-        string miiSaveScreenBGMFilePath2 = @"..\_working_directory\files\sound\stream\01_ME_SAVE.brstm";
-        string demoReelBGMFilePath2 = @"..\_working_directory\files\sound\stream\02_BGM_DEMO.brstm";
-        string bannerBGMFilePath2 = @"..\_working_directory\files\sound\stream\03_BGM_BANNER.brstm";
-        string miiHolidayBGMFilePath2 = @"..\_working_directory\files\sound\stream\03_ME_HOLIDAY.brstm";
-        string saveLoadScreenBGMFilePath2 = @"..\_working_directory\files\sound\stream\04_BGM_SAVELOAD.brstm";
-        string menuBGMFilePath2 = @"..\_working_directory\files\sound\stream\05_BGM_MENU.brstm";
-        string fireworksSoundFilePath2 = @"..\_working_directory\files\sound\stream\19_ME_OP_FIREWORKS.brstm";
+        string soundConfig1_dir2 = @"..\_working_directory\files\sound\Itast.brsar";
+        string soundConfig2_dir2 = @"..\_working_directory\files\sound\Itast2.brsar";
+        string soundConfig3_dir2 = @"..\_working_directory\files\sound\Itast3.brsar";
 
-        //MAP BGM
-        //directory 1
-        string alephgardBGMFilePath = @"..\_working_directory\data\files\sound\stream\35_BGM_MAP_ALEFGARD.brstm";
-        string angelBGMFilePath = @"..\_working_directory\data\files\sound\stream\37_BGM_MAP_ANGEL.brstm";
-        string circuitBGMFilePath = @"..\_working_directory\data\files\sound\stream\21_BGM_MAP_CIRCUIT.brstm";
-        string colonyBGMFilePath = @"..\_working_directory\data\files\sound\stream\28_BGM_MAP_EGG.brstm";
-        string dahmaBGMFilePath = @"..\_working_directory\data\files\sound\stream\36_BGM_MAP_DHAMA.brstm";
-        string dolpicBGMFilePath = @"..\_working_directory\data\files\sound\stream\24_BGM_MAP_DOLPIC.brstm";
-        string hidariBGMFilePath = @"..\_working_directory\data\files\sound\stream\22_BGM_MAP_PEACH.brstm";
-        string kandataBGMFilePath = @"..\_working_directory\data\files\sound\stream\34_BGM_MAP_KANDATA.brstm";
-        string koopaBGMFilePath = @"..\_working_directory\data\files\sound\stream\26_BGM_MAP_KOOPA.brstm";
-        string majinzo0BGMFilePath = @"..\_working_directory\data\files\sound\stream\31_BGM_MAP_MAJINZOU.brstm";
-        string marioBGMFilePath = @"..\_working_directory\data\files\sound\stream\25_BGM_MAP_SMB.brstm";
-        string mooncityBGMFilePath = @"..\_working_directory\data\files\sound\stream\27_BGM_MAP_STARSHIP.brstm";
-        string slabbakatouBGMFilePath = @"..\_working_directory\data\files\sound\stream\33_BGM_MAP_SLABACCA.brstm";
-        string stadiumBGMFilePath = @"..\_working_directory\data\files\sound\stream\23_BGM_MAP_STADIUM.brstm";
-        string torodeenBGMFilePath = @"..\_working_directory\data\files\sound\stream\29_BGM_MAP_TRODAIN.brstm";
-        string yosshiBGMFilePath = @"..\_working_directory\data\files\sound\stream\20_BGM_MAP_YOSHI.brstm";
-        string yuureisenBGMFilePath = @"..\_working_directory\data\files\sound\stream\30_BGM_MAP_GHOSTSHIP.brstm";
-
-        //directory 2 //TODO: FIX THESE
-        string alephgardBGMFilePath2 = @"..\_working_directory\files\sound\stream\35_BGM_MAP_ALEFGARD.brstm";
-        string angelBGMFilePath2 = @"..\_working_directory\files\sound\stream\37_BGM_MAP_ANGEL.brstm";
-        string circuitBGMFilePath2 = @"..\_working_directory\files\sound\stream\21_BGM_MAP_CIRCUIT.brstm";
-        string colonyBGMFilePath2 = @"..\_working_directory\files\sound\stream\28_BGM_MAP_EGG.brstm";
-        string dahmaBGMFilePath2 = @"..\_working_directory\files\sound\stream\36_BGM_MAP_DHAMA.brstm";
-        string dolpicBGMFilePath2 = @"..\_working_directory\files\sound\stream\24_BGM_MAP_DOLPIC.brstm";
-        string hidariBGMFilePath2 = @"..\_working_directory\files\sound\stream\22_BGM_MAP_PEACH.brstm";
-        string kandataBGMFilePath2 = @"..\_working_directory\files\sound\stream\34_BGM_MAP_KANDATA.brstm";
-        string koopaBGMFilePath2 = @"..\_working_directory\files\sound\stream\26_BGM_MAP_KOOPA.brstm";
-        string majinzo0BGMFilePath2 = @"..\_working_directory\files\sound\stream\31_BGM_MAP_MAJINZOU.brstm";
-        string marioBGMFilePath2 = @"..\_working_directory\files\sound\stream\25_BGM_MAP_SMB.brstm";
-        string mooncityBGMFilePath2 = @"..\_working_directory\files\sound\stream\27_BGM_MAP_STARSHIP.brstm";
-        string slabbakatouBGMFilePath2 = @"..\_working_directory\files\sound\stream\33_BGM_MAP_SLABACCA.brstm";
-        string stadiumBGMFilePath2 = @"..\_working_directory\files\sound\stream\23_BGM_MAP_STADIUM.brstm";
-        string torodeenBGMFilePath2 = @"..\_working_directory\files\sound\stream\29_BGM_MAP_TRODAIN.brstm";
-        string yosshiBGMFilePath2 = @"..\_working_directory\files\sound\stream\20_BGM_MAP_YOSHI.brstm";
-        string yuureisenBGMFilePath2 = @"..\_working_directory\files\sound\stream\30_BGM_MAP_GHOSTSHIP.brstm";
-
-        string emptyMusicTrack = @"..\_zmisc\empty.brstm";
+        string musiclessConfigFile = @"..\_zmisc\Itast.brsar";
         string directoryTestFolderPath = @"..\_working_directory\";
 
         bool dir1 = false;
@@ -900,63 +851,20 @@ namespace CustomStreetManager
         {
             if (removeIntroMenuAndMapBgmToolStripMenuItem.Checked)
             {
-                if (File.Exists(emptyMusicTrack))
+                
+                if (File.Exists(musiclessConfigFile))
                 {
                     if (dir1)
                     {
-                        MoveFile(emptyMusicTrack, titleBGMFilePath);
-                        MoveFile(emptyMusicTrack, miiSaveScreenBGMFilePath);
-                        MoveFile(emptyMusicTrack, demoReelBGMFilePath);
-                        MoveFile(emptyMusicTrack, bannerBGMFilePath);
-                        MoveFile(emptyMusicTrack, miiHolidayBGMFilePath);
-                        MoveFile(emptyMusicTrack, saveLoadScreenBGMFilePath);
-                        MoveFile(emptyMusicTrack, menuBGMFilePath);
-                        MoveFile(emptyMusicTrack, fireworksSoundFilePath);
-                        MoveFile(emptyMusicTrack, alephgardBGMFilePath);
-                        MoveFile(emptyMusicTrack, angelBGMFilePath);
-                        MoveFile(emptyMusicTrack, circuitBGMFilePath);
-                        MoveFile(emptyMusicTrack, colonyBGMFilePath);
-                        MoveFile(emptyMusicTrack, dahmaBGMFilePath);
-                        MoveFile(emptyMusicTrack, dolpicBGMFilePath);
-                        MoveFile(emptyMusicTrack, hidariBGMFilePath);
-                        MoveFile(emptyMusicTrack, kandataBGMFilePath);
-                        MoveFile(emptyMusicTrack, koopaBGMFilePath);
-                        MoveFile(emptyMusicTrack, majinzo0BGMFilePath);
-                        MoveFile(emptyMusicTrack, marioBGMFilePath);
-                        MoveFile(emptyMusicTrack, mooncityBGMFilePath);
-                        MoveFile(emptyMusicTrack, slabbakatouBGMFilePath);
-                        MoveFile(emptyMusicTrack, stadiumBGMFilePath);
-                        MoveFile(emptyMusicTrack, torodeenBGMFilePath);
-                        MoveFile(emptyMusicTrack, yosshiBGMFilePath);
-                        MoveFile(emptyMusicTrack, yuureisenBGMFilePath);
+                        MoveFile(musiclessConfigFile, soundConfig1);
+                        MoveFile(musiclessConfigFile, soundConfig2);
+                        MoveFile(musiclessConfigFile, soundConfig3);
                     }
                     else if (dir2)
                     {
-                        MoveFile(emptyMusicTrack, titleBGMFilePath2);
-                        MoveFile(emptyMusicTrack, miiSaveScreenBGMFilePath2);
-                        MoveFile(emptyMusicTrack, demoReelBGMFilePath2);
-                        MoveFile(emptyMusicTrack, bannerBGMFilePath2);
-                        MoveFile(emptyMusicTrack, miiHolidayBGMFilePath2);
-                        MoveFile(emptyMusicTrack, saveLoadScreenBGMFilePath2);
-                        MoveFile(emptyMusicTrack, menuBGMFilePath2);
-                        MoveFile(emptyMusicTrack, fireworksSoundFilePath2);
-                        MoveFile(emptyMusicTrack, alephgardBGMFilePath2);
-                        MoveFile(emptyMusicTrack, angelBGMFilePath2);
-                        MoveFile(emptyMusicTrack, circuitBGMFilePath2);
-                        MoveFile(emptyMusicTrack, colonyBGMFilePath2);
-                        MoveFile(emptyMusicTrack, dahmaBGMFilePath2);
-                        MoveFile(emptyMusicTrack, dolpicBGMFilePath2);
-                        MoveFile(emptyMusicTrack, hidariBGMFilePath2);
-                        MoveFile(emptyMusicTrack, kandataBGMFilePath2);
-                        MoveFile(emptyMusicTrack, koopaBGMFilePath2);
-                        MoveFile(emptyMusicTrack, majinzo0BGMFilePath2);
-                        MoveFile(emptyMusicTrack, marioBGMFilePath2);
-                        MoveFile(emptyMusicTrack, mooncityBGMFilePath2);
-                        MoveFile(emptyMusicTrack, slabbakatouBGMFilePath2);
-                        MoveFile(emptyMusicTrack, stadiumBGMFilePath2);
-                        MoveFile(emptyMusicTrack, torodeenBGMFilePath2);
-                        MoveFile(emptyMusicTrack, yosshiBGMFilePath2);
-                        MoveFile(emptyMusicTrack, yuureisenBGMFilePath2);
+                        MoveFile(musiclessConfigFile, soundConfig1_dir2);
+                        MoveFile(musiclessConfigFile, soundConfig2_dir2);
+                        MoveFile(musiclessConfigFile, soundConfig3_dir2);
                     }
                 }
             }
