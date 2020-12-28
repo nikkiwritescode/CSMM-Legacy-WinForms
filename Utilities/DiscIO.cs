@@ -2,7 +2,7 @@
 
 namespace CustomStreetManager.Utilities
 {
-    public static class DiscIO
+    public static class DiscIo
     {
         public static void MoveFile(string newFilePath, string fileToReplacePath)
         {

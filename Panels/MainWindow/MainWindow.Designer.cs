@@ -383,7 +383,7 @@
             this.addMapButton.TabIndex = 35;
             this.addMapButton.Text = "Add map";
             this.addMapButton.UseVisualStyleBackColor = true;
-            this.addMapButton.Click += new System.EventHandler(this.openMapButton_Click);
+            this.addMapButton.Click += new System.EventHandler(this.OpenMapButtonClick);
             // 
             // clearListButton
             // 
@@ -635,7 +635,7 @@
             this.dynTheColossusButton.TabStop = true;
             this.dynTheColossusButton.Text = "The Colossus (max: 2 maps)";
             this.dynTheColossusButton.UseVisualStyleBackColor = true;
-            this.dynTheColossusButton.CheckedChanged += new System.EventHandler(this.dynTheColossusButton_CheckedChanged_1);
+            this.dynTheColossusButton.CheckedChanged += new System.EventHandler(this.DynamicColossusRadioButtonWasChecked);
             // 
             // dynMtMagButton
             // 
@@ -647,7 +647,7 @@
             this.dynMtMagButton.TabStop = true;
             this.dynMtMagButton.Text = "Mt. Magmageddon (max: 2 maps)";
             this.dynMtMagButton.UseVisualStyleBackColor = true;
-            this.dynMtMagButton.CheckedChanged += new System.EventHandler(this.dynMtMagButton_CheckedChanged_1);
+            this.dynMtMagButton.CheckedChanged += new System.EventHandler(this.DynamicMtMagRadioButtonWasChecked);
             // 
             // dynTheObservatoryButton
             // 
@@ -660,7 +660,7 @@
             this.dynTheObservatoryButton.TabStop = true;
             this.dynTheObservatoryButton.Text = "The Observatory (max: 4 maps)";
             this.dynTheObservatoryButton.UseVisualStyleBackColor = true;
-            this.dynTheObservatoryButton.CheckedChanged += new System.EventHandler(this.dynTheObservatoryButton_CheckedChanged);
+            this.dynTheObservatoryButton.CheckedChanged += new System.EventHandler(this.DynamicObservatoryRadioButtonWasChecked);
             // 
             // settingADynamicMap
             // 

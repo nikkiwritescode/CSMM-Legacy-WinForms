@@ -70,9 +70,11 @@
     </Compile>
     <Compile Include="FilePaths\DefsAsmHackPaths.cs" />
     <Compile Include="Panels\MainWindow\DynamicMapPanelHelpers.cs" />
+    <Compile Include="ErrorHandling\ErrorMessages.cs" />
     <Compile Include="Panels\MainWindow\InputValidation.cs" />
     <Compile Include="Dialogs\IsoSaveLoadDialogs.cs" />
-    <Compile Include="Utilities\DiscIO.cs" />
+    <Compile Include="Utilities\ProgressBarHelpers.cs" />
+    <Compile Include="Utilities\DiscIo.cs" />
     <Compile Include="FilePaths\DiscOperationsHelperPaths.cs" />
     <Compile Include="Panels\MainWindow\MainWindow.cs">
       <SubType>Form</SubType>
