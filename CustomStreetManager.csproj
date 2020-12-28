@@ -62,33 +62,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutPanel.cs">
+    <Compile Include="Panels\AboutPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutPanel.Designer.cs">
+    <Compile Include="Panels\AboutPanel.Designer.cs">
       <DependentUpon>AboutPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FilePaths\DefsAsmHackPaths.cs" />
+    <Compile Include="Panels\MainWindow\DynamicMapPanelHelpers.cs" />
+    <Compile Include="Panels\MainWindow\InputValidation.cs" />
+    <Compile Include="Dialogs\IsoSaveLoadDialogs.cs" />
+    <Compile Include="Utilities\DiscIO.cs" />
+    <Compile Include="FilePaths\DiscOperationsHelperPaths.cs" />
+    <Compile Include="Panels\MainWindow\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Panels\MainWindow\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\IsoManagement.cs" />
+    <Compile Include="Panels\MainWindow\MapSelectionRadioButtonHelpers.cs" />
+    <Compile Include="FilePaths\MapFilePaths.cs" />
+    <Compile Include="Patches\MapReplacement.cs" />
+    <Compile Include="FilePaths\MusicFilePaths.cs" />
+    <Compile Include="Patches\OptionalPatches.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressBar.cs">
+    <Compile Include="Panels\ProgressBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressBar.Designer.cs">
+    <Compile Include="Panels\ProgressBar.Designer.cs">
       <DependentUpon>ProgressBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutPanel.resx">
+    <Compile Include="FilePaths\UIMessageFilePaths.cs" />
+    <Compile Include="FilePaths\WiimmfiPaths.cs" />
+    <EmbeddedResource Include="Panels\AboutPanel.resx">
       <DependentUpon>AboutPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\MainWindow\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressBar.resx">
+    <EmbeddedResource Include="Panels\ProgressBar.resx">
       <DependentUpon>ProgressBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -119,6 +133,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cube.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Prompts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

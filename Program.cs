@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using CustomStreetManager.Panels.MainWindow;
 
 namespace CustomStreetManager
 {
@@ -15,7 +16,7 @@ namespace CustomStreetManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainWindow());
         }
     }
 }

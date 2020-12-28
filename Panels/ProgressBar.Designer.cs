@@ -1,4 +1,4 @@
-﻿namespace CustomStreetManager
+﻿namespace CustomStreetManager.Panels
 {
     partial class ProgressBar
     {
@@ -69,7 +69,6 @@
             this.progressLabel.Text = "label1";
             this.progressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.progressLabel.UseWaitCursor = true;
-            this.progressLabel.Click += new System.EventHandler(this.progressLabel_Click);
             // 
             // ProgressBar
             // 
@@ -88,7 +87,6 @@
             this.Text = "Updating ISO";
             this.TopMost = true;
             this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.ProgressBar_Load);
             this.ResumeLayout(false);
 
         }

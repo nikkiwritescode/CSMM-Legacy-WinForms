@@ -6,3 +6,14 @@ C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.Pr
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.csproj.GenerateResource.cache
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.exe
 C:\Users\nikki\source\repos\CustomStreetManager\obj\Debug\CustomStreetManager.pdb
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\bin\Debug\CustomStreetManager.exe
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\bin\Debug\CustomStreetManager.pdb
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.csprojAssemblyReference.cache
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.Panels.AboutPanel.resources
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.Panels.MainWindow.MainWindow.resources
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.Panels.ProgressBar.resources
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.Properties.Resources.resources
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.csproj.GenerateResource.cache
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.csproj.CoreCompileInputs.cache
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.exe
+C:\Users\nikki\Documents\Projects\Code\CustomStreetManager\obj\Debug\CustomStreetManager.pdb

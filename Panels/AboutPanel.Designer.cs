@@ -1,4 +1,4 @@
-﻿namespace CustomStreetManager
+﻿namespace CustomStreetManager.Panels
 {
     partial class AboutPanel
     {
@@ -52,8 +52,7 @@
             this.csmmNameLabel.Name = "csmmNameLabel";
             this.csmmNameLabel.Size = new System.Drawing.Size(196, 13);
             this.csmmNameLabel.TabIndex = 1;
-            this.csmmNameLabel.Text = "Custom Street Map Manager 0.94";
-            this.csmmNameLabel.Click += new System.EventHandler(this.csmmNameLabel_Click);
+            this.csmmNameLabel.Text = "Custom Street Map Manager 0.95";
             // 
             // companyLabel
             // 
@@ -88,8 +87,7 @@
             this.Name = "AboutPanel";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About CSMM 0.94";
-            this.Load += new System.EventHandler(this.AboutPanel_Load);
+            this.Text = "About CSMM 0.95";
             this.ResumeLayout(false);
             this.PerformLayout();
 

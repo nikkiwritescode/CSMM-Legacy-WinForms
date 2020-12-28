@@ -1,6 +1,6 @@
-﻿namespace CustomStreetManager
+﻿namespace CustomStreetManager.Panels.MainWindow
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -21,12 +21,12 @@
         }
 
         private System.Windows.Forms.Label whichMapShouldWeReplaceLabel;
-        private System.Windows.Forms.RadioButton trodainButton;
-        private System.Windows.Forms.RadioButton observatoryButton;
-        private System.Windows.Forms.RadioButton ghostShipButton;
-        private System.Windows.Forms.RadioButton slimeniaButton;
-        private System.Windows.Forms.RadioButton mtmagButton;
-        private System.Windows.Forms.RadioButton rhrButton;
+        public System.Windows.Forms.RadioButton trodainButton;
+        public System.Windows.Forms.RadioButton observatoryButton;
+        public System.Windows.Forms.RadioButton ghostShipButton;
+        public System.Windows.Forms.RadioButton slimeniaButton;
+        public System.Windows.Forms.RadioButton mtmagButton;
+        public System.Windows.Forms.RadioButton rhrButton;
         private System.Windows.Forms.Label label2;
         #region Windows Form Designer generated code
 
@@ -36,7 +36,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.whichMapShouldWeReplaceLabel = new System.Windows.Forms.Label();
             this.trodainButton = new System.Windows.Forms.RadioButton();
             this.observatoryButton = new System.Windows.Forms.RadioButton();
@@ -65,7 +65,7 @@
             this.clearListButton = new System.Windows.Forms.Button();
             this.listOfMapsToPatchIn = new System.Windows.Forms.ListView();
             this.customMapName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mapToReplace = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mapToReplaceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.filePathHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.isDynamic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dynOrderHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -117,7 +117,6 @@
             this.whichMapShouldWeReplaceLabel.TabIndex = 2;
             this.whichMapShouldWeReplaceLabel.Text = "Which map should we replace?";
             this.whichMapShouldWeReplaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.whichMapShouldWeReplaceLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // trodainButton
             // 
@@ -401,7 +400,7 @@
             // 
             this.listOfMapsToPatchIn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.customMapName,
-            this.mapToReplace,
+            this.mapToReplaceColumnHeader,
             this.filePathHeader,
             this.isDynamic,
             this.dynOrderHeader});
@@ -421,11 +420,11 @@
             this.customMapName.Text = "Incoming Map";
             this.customMapName.Width = 89;
             // 
-            // mapToReplace
+            // mapToReplaceColumnHeader
             // 
-            this.mapToReplace.Text = "Map To Replace";
-            this.mapToReplace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mapToReplace.Width = 108;
+            this.mapToReplaceColumnHeader.Text = "Map To Replace";
+            this.mapToReplaceColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mapToReplaceColumnHeader.Width = 108;
             // 
             // filePathHeader
             // 
@@ -450,13 +449,12 @@
             this.removeMapButton.TabIndex = 40;
             this.removeMapButton.Text = "Remove map";
             this.removeMapButton.UseVisualStyleBackColor = true;
-            this.removeMapButton.Click += new System.EventHandler(this.removeMapButton_Click);
+            this.removeMapButton.Click += new System.EventHandler(this.RemoveMapFromList);
             // 
             // addMapsDialog
             // 
             this.addMapsDialog.FileName = "openFileDialog1";
             this.addMapsDialog.ReadOnlyChecked = true;
-            this.addMapsDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.addMapDialog_FileOk);
             // 
             // panel1
             // 
@@ -487,7 +485,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 212);
             this.panel1.TabIndex = 41;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // menuStrip1
             // 
@@ -535,7 +532,7 @@
             this.deflaktorsASMHacksToolStripMenuItem.Name = "deflaktorsASMHacksToolStripMenuItem";
             this.deflaktorsASMHacksToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.deflaktorsASMHacksToolStripMenuItem.Text = "Deflaktor\'s ASM Hacks (PAL ONLY)";
-            this.deflaktorsASMHacksToolStripMenuItem.Click += new System.EventHandler(this.deflaktorsASMHacksToolStripMenuItem_Click);
+            this.deflaktorsASMHacksToolStripMenuItem.Click += new System.EventHandler(this.EnableDefAsmHackToolStripMenuItem);
             // 
             // removeIntroMenuAndMapBgmToolStripMenuItem
             // 
@@ -544,7 +541,6 @@
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Name = "removeIntroMenuAndMapBgmToolStripMenuItem";
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.removeIntroMenuAndMapBgmToolStripMenuItem.Text = "Disable All Music";
-            this.removeIntroMenuAndMapBgmToolStripMenuItem.Click += new System.EventHandler(this.removeIntroMenuAndMapBmgToolStripMenuItem_Click);
             // 
             // patchToWiimmfiToolStripMenuItem
             // 
@@ -553,7 +549,6 @@
             this.patchToWiimmfiToolStripMenuItem.Name = "patchToWiimmfiToolStripMenuItem";
             this.patchToWiimmfiToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.patchToWiimmfiToolStripMenuItem.Text = "Wiimmfi";
-            this.patchToWiimmfiToolStripMenuItem.Click += new System.EventHandler(this.patchToWiimmfiToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -676,7 +671,6 @@
             this.settingADynamicMap.TabIndex = 13;
             this.settingADynamicMap.Text = "Choose which map to replace:";
             this.settingADynamicMap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.settingADynamicMap.Click += new System.EventHandler(this.settingADynamicMap_Click);
             // 
             // label1
             // 
@@ -688,7 +682,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Place the map files in the correct order:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // map4OrderDropdown
             // 
@@ -756,7 +749,6 @@
             this.dynMap2Label.TabIndex = 5;
             this.dynMap2Label.Text = "map2";
             this.dynMap2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.dynMap2Label.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // dynMapLabel1
             // 
@@ -767,7 +759,7 @@
             this.dynMapLabel1.Text = "map1";
             this.dynMapLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -788,11 +780,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Custom Street Map Manager";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -806,59 +797,59 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton peachButton;
-        private System.Windows.Forms.RadioButton delfinoButton;
-        private System.Windows.Forms.RadioButton yoshiButton;
-        private System.Windows.Forms.RadioButton circuitButton;
-        private System.Windows.Forms.RadioButton starshipButton;
-        private System.Windows.Forms.RadioButton stadiumButton;
+        public System.Windows.Forms.RadioButton peachButton;
+        public System.Windows.Forms.RadioButton delfinoButton;
+        public System.Windows.Forms.RadioButton yoshiButton;
+        public System.Windows.Forms.RadioButton circuitButton;
+        public System.Windows.Forms.RadioButton starshipButton;
+        public System.Windows.Forms.RadioButton stadiumButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton alltradesButton;
-        private System.Windows.Forms.RadioButton colossusButton;
-        private System.Windows.Forms.RadioButton gegButton;
-        private System.Windows.Forms.RadioButton bowserButton;
-        private System.Windows.Forms.RadioButton smbButton;
-        private System.Windows.Forms.RadioButton alefgardButton;
+        public System.Windows.Forms.RadioButton alltradesButton;
+        public System.Windows.Forms.RadioButton colossusButton;
+        public System.Windows.Forms.RadioButton gegButton;
+        public System.Windows.Forms.RadioButton bowserButton;
+        public System.Windows.Forms.RadioButton smbButton;
+        public System.Windows.Forms.RadioButton alefgardButton;
         private System.Windows.Forms.Button replaceButton;
-        private System.Windows.Forms.RadioButton noneButton;
+        public System.Windows.Forms.RadioButton noneButton;
         private System.Windows.Forms.Button addMapButton;
         private System.Windows.Forms.Button clearListButton;
-        private System.Windows.Forms.ListView listOfMapsToPatchIn;
+        public System.Windows.Forms.ListView listOfMapsToPatchIn;
         private System.Windows.Forms.ColumnHeader customMapName;
-        private System.Windows.Forms.ColumnHeader mapToReplace;
+        private System.Windows.Forms.ColumnHeader mapToReplaceColumnHeader;
         private System.Windows.Forms.Button removeMapButton;
         private System.Windows.Forms.OpenFileDialog addMapsDialog;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeIntroMenuAndMapBgmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patchToWiimmfiToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem removeIntroMenuAndMapBgmToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem patchToWiimmfiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutCustomStreetMapManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button setOutputLocationButton;
-        private System.Windows.Forms.Label setOutputPathLabel;
+        public System.Windows.Forms.Label setOutputPathLabel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label setInputISOLocation;
-        private System.Windows.Forms.Panel dynamicMapPanel;
-        private System.Windows.Forms.Label dynMap2Label;
-        private System.Windows.Forms.Label dynMapLabel1;
-        private System.Windows.Forms.Label dynMap4Label;
-        private System.Windows.Forms.Label dynMap3Label;
-        private System.Windows.Forms.ComboBox map4OrderDropdown;
-        private System.Windows.Forms.ComboBox map3OrderDropdown;
-        private System.Windows.Forms.ComboBox map2OrderDropdown;
-        private System.Windows.Forms.ComboBox map1OrderDropdown;
+        public System.Windows.Forms.Label setInputISOLocation;
+        public System.Windows.Forms.Panel dynamicMapPanel;
+        public System.Windows.Forms.Label dynMap2Label;
+        public System.Windows.Forms.Label dynMapLabel1;
+        public System.Windows.Forms.Label dynMap4Label;
+        public System.Windows.Forms.Label dynMap3Label;
+        public System.Windows.Forms.ComboBox map4OrderDropdown;
+        public System.Windows.Forms.ComboBox map3OrderDropdown;
+        public System.Windows.Forms.ComboBox map2OrderDropdown;
+        public System.Windows.Forms.ComboBox map1OrderDropdown;
         private System.Windows.Forms.ColumnHeader filePathHeader;
         private System.Windows.Forms.ColumnHeader isDynamic;
         private System.Windows.Forms.ColumnHeader dynOrderHeader;
-        private System.Windows.Forms.ToolStripMenuItem deflaktorsASMHacksToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem deflaktorsASMHacksToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton dynTheColossusButton;
-        private System.Windows.Forms.RadioButton dynMtMagButton;
-        private System.Windows.Forms.RadioButton dynTheObservatoryButton;
+        public System.Windows.Forms.RadioButton dynTheColossusButton;
+        public System.Windows.Forms.RadioButton dynMtMagButton;
+        public System.Windows.Forms.RadioButton dynTheObservatoryButton;
         private System.Windows.Forms.Label settingADynamicMap;
     }
 }
