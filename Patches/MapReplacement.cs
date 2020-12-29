@@ -104,15 +104,15 @@ namespace CustomStreetManager.Patches
             var mapNumber = item.SubItems[4].Text;
             switch (mapNumber)
             {
-                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.volcano0FilePath):
+                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.MtMag1):
                     return;
                 case "1":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.volcano0FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.MtMag1);
                     break;
-                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.volcano1FilePath):
+                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.MtMag2):
                     return;
                 case "2":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.volcano1FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.MtMag2);
                     break;
             }
         }
@@ -122,15 +122,15 @@ namespace CustomStreetManager.Patches
             var mapNumber = item.SubItems[4].Text;
             switch (mapNumber)
             {
-                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.majinzo0FilePath):
+                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Colossus1):
                     return;
                 case "1":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.majinzo0FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Colossus1);
                     break;
-                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.majinzo1FilePath):
+                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Colossus2):
                     return;
                 case "2":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.majinzo1FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Colossus2);
                     break;
             }
         }
@@ -140,135 +140,135 @@ namespace CustomStreetManager.Patches
             var mapNumber = item.SubItems[4].Text;
             switch (mapNumber)
             {
-                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.angel0FilePath):
+                case "1" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Observatory1):
                     return;
                 case "1":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.angel0FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Observatory1);
                     break;
-                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.angel1FilePath):
+                case "2" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Observatory2):
                     return;
                 case "2":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.angel1FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Observatory2);
                     break;
-                case "3" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.angel2FilePath):
+                case "3" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Observatory3):
                     return;
                 case "3":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.angel2FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Observatory3);
                     break;
-                case "4" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.angel3FilePath):
+                case "4" when !File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Observatory4):
                     return;
                 case "4":
-                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.angel3FilePath);
+                    DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Observatory4);
                     break;
             }
         }
 
         private void ReplaceCastleTrodain(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.torodeenFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.torodeenFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.CastleTrodain)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.CastleTrodain);
         }
 
         private void ReplaceSingleObservatory(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.angel0FilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.angel0FilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Observatory1)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Observatory1);
         }
 
         private void ReplaceGhostShip(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.yuureisenFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.yuureisenFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.GhostShip)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.GhostShip);
         }
 
         private void ReplaceSlimenia(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.slabbakatouFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.slabbakatouFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Slimenia)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Slimenia);
         }
 
         private void ReplaceStaticMtMagmageddon(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.volcano0FilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.volcano0FilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.MtMag1)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.MtMag1);
         }
 
         private void ReplaceRobbinHoodRuins(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.kandataFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.kandataFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.RobbinHoodRuins)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.RobbinHoodRuins);
         }
 
         private void ReplacePeachsCastle(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.hidariFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.hidariFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.PeachsCastle)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.PeachsCastle);
         }
 
         private void ReplaceDelfinoPlaza(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.dolpicFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.dolpicFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.DelfinoPlaza)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.DelfinoPlaza);
         }
 
         private void ReplaceYoshisIsland(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.yosshiFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.yosshiFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.YoshisIsland)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.YoshisIsland);
         }
 
         private void ReplaceMarioCircuit(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.circuitFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.circuitFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.MarioCircuit)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.MarioCircuit);
         }
 
         private void ReplaceStarshipMario(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.mooncityFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.mooncityFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.StarshipMario)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.StarshipMario);
         }
 
         private void ReplaceMarioStadium(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.stadiumFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.stadiumFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.MarioStadium)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.MarioStadium);
         }
 
         private void ReplaceAlltradesAbbey(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.dahmaFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.dahmaFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.AlltradesAbbey)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.AlltradesAbbey);
         }
 
         private void ReplaceSingleColossus(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.majinzo0FilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.majinzo0FilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Colossus1)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Colossus1);
         }
 
         private void ReplaceGoodEggGalaxy(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.colonyFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.colonyFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.GoodEggGalaxy)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.GoodEggGalaxy);
         }
 
         private void ReplaceBowsersCastle(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.koopaFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.koopaFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.BowsersCastle)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.BowsersCastle);
         }
 
         private void ReplaceSmb(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.marioFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.marioFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.SMB)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.SMB);
         }
 
         private void ReplaceAlefgard(string newMapPath)
         {
-            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.alephgardFilePath)) return;
-            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.alephgardFilePath);
+            if (!File.Exists(newMapPath) || !File.Exists(_discPath + MapFilePaths.Alefgard)) return;
+            DiscIo.MoveFile(newMapPath, _discPath + MapFilePaths.Alefgard);
         }
     }
 }
