@@ -6,6 +6,7 @@ using CustomStreetManager.ErrorHandling;
 using CustomStreetManager.FilePaths;
 using CustomStreetManager.Patches;
 using CustomStreetManager.Utilities;
+using CustomStreetManager.Validation;
 
 namespace CustomStreetManager.Panels.MainWindow
 {
@@ -21,14 +22,14 @@ namespace CustomStreetManager.Panels.MainWindow
             OptionalPatches = new OptionalPatches(this);
             MapSelectionRadioButtonHelpers = new MapSelectionRadioButtonHelpers(this);
             DynamicMapPanelHelpers = new DynamicMapPanelHelpers(this);
-            InputValidation = new InputValidation(this);
+            DynamicMapPanelValidation = new DynamicMapPanelValidation(this);
         }
         public IsoManagement IsoManagement { get; }
         public MapReplacement MapReplacement { get; }
         public OptionalPatches OptionalPatches { get; }
         public MapSelectionRadioButtonHelpers MapSelectionRadioButtonHelpers { get; }
         public DynamicMapPanelHelpers DynamicMapPanelHelpers { get; }
-        public InputValidation InputValidation { get; }
+        public DynamicMapPanelValidation DynamicMapPanelValidation { get; }
 
         public void Awake() => Directory.SetCurrentDirectory(Directory.GetCurrentDirectory());
 
@@ -52,6 +53,7 @@ namespace CustomStreetManager.Panels.MainWindow
                 {
                     IsoManagement.StartExtractBatFileProcess(extractDiscBatFilePath);
                     DiscPath = IsoManagement.DetermineIsoFolderStructure(progressBar);
+
 
                     ProgressBarHelpers.UpdateProgressWindow(progressBar, "Replacing maps...", 40);
                     MapReplacement.ReplaceMaps();
@@ -137,7 +139,7 @@ namespace CustomStreetManager.Panels.MainWindow
             var allSelectedItems = this.listOfMapsToPatchIn.SelectedItems;
             if (allSelectedItems.Count == 4)
             {
-                if (!InputValidation.FourDynamicDropdownsAreNotNullAndNotEqualToEachOther()) return;
+                if (!DynamicMapPanelValidation.FourDynamicDropdownsAreNotNullAndNotEqualToEachOther()) return;
                 foreach (ListViewItem item in allSelectedItems)
                 {
                     item.SubItems[1].Text = "*The Observatory";
@@ -161,7 +163,7 @@ namespace CustomStreetManager.Panels.MainWindow
             }
             else if (allSelectedItems.Count == 3)
             {
-                if (!InputValidation.ThreeDynamicDropdownsAreNotNullAndNotEqualToEachOther())
+                if (!DynamicMapPanelValidation.ThreeDynamicDropdownsAreNotNullAndNotEqualToEachOther())
                 {
                     ErrorMessages.ThrowDynamicMapOrderMustBeSetAndUniqueError();
                     dynTheObservatoryButton.Checked = false;
@@ -186,7 +188,7 @@ namespace CustomStreetManager.Panels.MainWindow
             }
             else if (allSelectedItems.Count == 2)
             {
-                if (!InputValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
+                if (!DynamicMapPanelValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
                 {
                     ErrorMessages.ThrowDynamicMapOrderMustBeSetAndUniqueError();
                     dynTheObservatoryButton.Checked = false;
@@ -221,7 +223,7 @@ namespace CustomStreetManager.Panels.MainWindow
 
             if (allSelectedItems.Count == 2)
             {
-                if (!InputValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
+                if (!DynamicMapPanelValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
                 {
                     ErrorMessages.ThrowDynamicMapOrderMustBeSetAndUniqueError();
                     dynMtMagButton.Checked = false;
@@ -255,7 +257,7 @@ namespace CustomStreetManager.Panels.MainWindow
             var allSelectedItems = this.listOfMapsToPatchIn.SelectedItems;
             if (allSelectedItems.Count == 2)
             {
-                if (!InputValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
+                if (!DynamicMapPanelValidation.TwoDynamicDropdownsAreNotNullAndNotEqualToEachOther())
                 {
                     ErrorMessages.ThrowDynamicMapOrderMustBeSetAndUniqueError();
                     dynTheColossusButton.Checked = false;
