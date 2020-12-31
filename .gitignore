@@ -1,0 +1,6 @@
+_reference/
+bin/
+obj/
+*.suo
+*.user
+.vs
