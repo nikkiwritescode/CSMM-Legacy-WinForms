@@ -74,6 +74,7 @@
     <Compile Include="FilePaths\DefsAsmHackPaths.cs" />
     <Compile Include="Panels\MainWindow\DynamicMapPanelHelpers.cs" />
     <Compile Include="ErrorHandling\ErrorMessages.cs" />
+    <Compile Include="Utilities\ProcessAsyncHelper.cs" />
     <Compile Include="Validation\DynamicMapPanelValidation.cs" />
     <Compile Include="Dialogs\IsoSaveLoadDialogs.cs" />
     <Compile Include="Utilities\ProgressBarHelpers.cs" />

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using CustomStreetManager.FilePaths;
 using CustomStreetManager.Panels.MainWindow;
 using ProgressBar = CustomStreetManager.Panels.ProgressBar;
@@ -39,9 +40,13 @@ namespace CustomStreetManager.Utilities
             }
         }
 
-        public void StartExtractBatFileProcess(string extractDiscBatFilePath)
+        public async Task StartExtractBatFileProcess(string extractDiscBatFilePath)
         {
-            ProcessStartInfo psi = new ProcessStartInfo(extractDiscBatFilePath, Arguments)
+            /*var args = "\"" + _mainWindow.setInputISOLocation.Text + "\"";
+            var p = await ProcessAsyncHelper.RunAsync(extractDiscBatFilePath, args, 0).ConfigureAwait(true); ;
+            return p;*/
+            
+            var psi = new ProcessStartInfo(extractDiscBatFilePath, Arguments)
             {
                 Arguments = "\"" + _mainWindow.setInputISOLocation.Text + "\"",
                 CreateNoWindow = true,
@@ -49,11 +54,11 @@ namespace CustomStreetManager.Utilities
                 WorkingDirectory = Directory.GetCurrentDirectory()
             };
 
-            var p = Process.Start(psi);
-            p?.WaitForExit();
+            var p = await ProcessAsyncHelper.RunAsync(psi);
+            return;
         }
 
-        public void CompileTheDisc()
+        public async Task CompileTheDisc()
         {
             var compileDiscBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), DiscOperationsHelperPaths.CompileDiscFileName);
             var compileDiscWithWiimmfiBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), DiscOperationsHelperPaths.CompileDiscWithWiimmfiFileName);
@@ -63,6 +68,11 @@ namespace CustomStreetManager.Utilities
             {
                 case true:
                 {
+                    /*var args = "\"" + _mainWindow.setOutputPathLabel.Text + "\"";
+                    var p = await ProcessAsyncHelper.RunAsync(compileDiscWithWiimmfiBatFilePath, args, 0).ConfigureAwait(false); ;
+                    break;*/
+                    //return p;
+
                     var psi3 = new ProcessStartInfo(compileDiscWithWiimmfiBatFilePath, Arguments)
                     {
                         Arguments = "\"" + _mainWindow.setOutputPathLabel.Text + "\"",
@@ -70,12 +80,16 @@ namespace CustomStreetManager.Utilities
                         UseShellExecute = false,
                         WorkingDirectory = Directory.GetCurrentDirectory()
                     };
-                    var p3 = Process.Start(psi3);
-                    p3?.WaitForExit();
-                    break;
+
+                    var p = await ProcessAsyncHelper.RunAsync(psi3);
+                    return;
                 }
                 case false:
                 {
+                    /*var args = "\"" + _mainWindow.setOutputPathLabel.Text + "\"";
+                    var p = await ProcessAsyncHelper.RunAsync(compileDiscBatFilePath, args, 0).ConfigureAwait(false); ;
+                    break;*/
+                    //return p;
                     var psi3 = new ProcessStartInfo(compileDiscBatFilePath, Arguments)
                     {
                         Arguments = "\"" + _mainWindow.setOutputPathLabel.Text + "\"",
@@ -83,11 +97,12 @@ namespace CustomStreetManager.Utilities
                         UseShellExecute = false,
                         WorkingDirectory = Directory.GetCurrentDirectory()
                     };
-                    var p3 = Process.Start(psi3);
-                    p3?.WaitForExit();
-                    break;
+                    await ProcessAsyncHelper.RunAsync(psi3);
+                    return;
                 }
             }
+
+            return; //new ProcessAsyncHelper.Result();
         }
     }
 }

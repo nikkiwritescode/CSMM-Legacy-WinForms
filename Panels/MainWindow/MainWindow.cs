@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomStreetManager.ErrorHandling;
 using CustomStreetManager.FilePaths;
@@ -33,14 +35,14 @@ namespace CustomStreetManager.Panels.MainWindow
 
         public void Awake() => Directory.SetCurrentDirectory(Directory.GetCurrentDirectory());
 
-        private void UpdateMapButton_Click(object sender, EventArgs e)
+        private async void UpdateMapButton_Click(object sender, EventArgs e)
         {
             var extractDiscBatFilePath = Path.Combine(Directory.GetCurrentDirectory(), DiscOperationsHelperPaths.ExtractDiscFileName);
 
             var progressBar = new ProgressBar();
             progressBar.Show();
 
-            ProgressBarHelpers.UpdateProgressWindow(progressBar, "Extracting disc...", 25);
+            ProgressBarHelpers.UpdateProgressWindow(progressBar, "Extracting disc...", 20);
 
             if (!File.Exists(setInputISOLocation.Text))
             {
@@ -51,20 +53,21 @@ namespace CustomStreetManager.Panels.MainWindow
                 if (setOutputPathLabel.Text == "None") { ErrorMessages.ThrowOutputFilePathCannotBeBlankError(progressBar); }
                 else
                 {
-                    IsoManagement.StartExtractBatFileProcess(extractDiscBatFilePath);
+                    await IsoManagement.StartExtractBatFileProcess(extractDiscBatFilePath);
+                    //if (p.Completed != true && p.ExitCode != 0) return;
+                    ProgressBarHelpers.UpdateProgressWindow(progressBar, "Determining file structure...", 25);
                     DiscPath = IsoManagement.DetermineIsoFolderStructure(progressBar);
-
 
                     ProgressBarHelpers.UpdateProgressWindow(progressBar, "Replacing maps...", 40);
                     MapReplacement.ReplaceMaps();
 
-                    ProgressBarHelpers.UpdateProgressWindow(progressBar, "Setting Options...", 70);
-                    if(removeIntroMenuAndMapBgmToolStripMenuItem.Checked) { OptionalPatches.RemoveMusic(); }
+                    ProgressBarHelpers.UpdateProgressWindow(progressBar, "Setting Options...", 60);
+                    if (removeIntroMenuAndMapBgmToolStripMenuItem.Checked) { OptionalPatches.RemoveMusic(); }
                     OptionalPatches.AsmHacks();
                     OptionalPatches.UpdateUiForWiimmfi();
 
-                    ProgressBarHelpers.UpdateProgressWindow(progressBar, "Re-compiling disc...", 90);
-                    IsoManagement.CompileTheDisc();
+                    ProgressBarHelpers.UpdateProgressWindow(progressBar, "Re-compiling disc...", 80);
+                    await IsoManagement.CompileTheDisc();
 
                     ProgressBarHelpers.UpdateProgressWindow(progressBar, "Done!", 100);
                     progressBar.SetButtonToClose();
